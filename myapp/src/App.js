@@ -8,6 +8,7 @@ import Navbar from "./Components/MyNavbar";
 import Carousel from "./Components/Carousel";
 import PopUp from "./Components/LoginPopup";
 import MainAlbumContainer from "./Components/MainAlbumContainer";
+import AlbumPage from './Components/AlbumPage/AlbumPageContainer';
 function App() {
   const context = useContext(UserContext);
   return (
@@ -28,6 +29,7 @@ function App() {
               return <h1>bestseller</h1>;
             }}
           ></Route>
+          <Route path='/album' component = {AlbumPage}/>
         </Switch>
         {/* //! footer comes bottom */}
       </div>

@@ -5,13 +5,13 @@ const AlbumTemplateHero = () => {
         <Jumbotron>
             <Row>
                 <Col>
-                    <h2>{title}</h2>
+                    {/* <h2>{title}</h2>
                     <p>{artist}</p>
                     <p>{year}</p>
-                    <p>{genre}</p>
+                    <p>{genre}</p> */}
                 </Col>
                 <Col>
-                    <img src='{url}' alt='' />
+                    {/* <img src='{url}' alt='' /> */}
                 </Col>
             </Row>
         </Jumbotron>

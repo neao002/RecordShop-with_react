@@ -14,8 +14,11 @@ function ThumbnailAlbum(props) {
       className="p-1 mb-4 mx-auto d-flex justify-content-between"
       style={{
         // border: "1px solid grey",
-        width: "30%",
-        height: "250px",
+
+        //I add the style directly to the Link element in => MainAlbumContainer
+
+        // width: "30%",
+        // height: "250px",
         borderRadius: "15px",
       }}
     >
