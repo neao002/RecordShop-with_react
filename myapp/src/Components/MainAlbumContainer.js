@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import ThumbNail from "./albums/thumbnailAlbum";
-import UserContext from "../Context/context";
-function mainAlbumContainer() {
+import ThumbNail from "./albums/ThumbnailAlbum";
+import UserContext from "../Context/Context";
+function MainAlbumContainer() {
   const context = useContext(UserContext);
   return (
     <div className="mx-auto" style={{ width: "80%" }}>
@@ -23,4 +23,4 @@ function mainAlbumContainer() {
   );
 }
 
-export default mainAlbumContainer;
+export default MainAlbumContainer;

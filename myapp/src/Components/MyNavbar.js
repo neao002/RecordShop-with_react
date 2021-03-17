@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import UserContext from "../Context/context";
+import UserContext from "../Context/Context";
 
-function navbar() {
+function MyNavbar() {
   const context = useContext(UserContext);
   return (
     <>
@@ -122,4 +122,4 @@ function navbar() {
   );
 }
 
-export default navbar;
+export default MyNavbar;

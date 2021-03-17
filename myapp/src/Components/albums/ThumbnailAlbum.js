@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "../../Context/context";
-function thumbnailAlbum(props) {
+import UserContext from "../../Context/Context";
+function ThumbnailAlbum(props) {
   const context = useContext(UserContext);
   const addToChart = (dispatch) => {
     dispatch({
@@ -53,4 +53,4 @@ function thumbnailAlbum(props) {
   );
 }
 
-export default thumbnailAlbum;
+export default ThumbnailAlbum;

@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { Button, Modal } from "react-bootstrap";
-import UserContext from "../Context/context";
+import UserContext from "../Context/Context";
 export default function Example() {
   const [show, setShow] = useState(true);
   const [userName, setUserName] = useState("");

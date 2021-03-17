@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import UserContext from "./Context/context";
+import UserContext from "./Context/Context";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //! Components
-import Navbar from "./Components/navbar";
+import Navbar from "./Components/MyNavbar";
 import Carousel from "./Components/Carousel";
-import PopUp from "./Components/loginPopup";
-import MainAlbumContainer from "./Components/mainAlbumContainer";
+import PopUp from "./Components/LoginPopup";
+import MainAlbumContainer from "./Components/MainAlbumContainer";
 function App() {
   const context = useContext(UserContext);
   return (
