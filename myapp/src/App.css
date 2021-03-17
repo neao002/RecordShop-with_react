@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+.modal-dialog {
+  margin-top: 10% !important;
+}
+.modal-content {
+  background-color: #333 !important;
+  color: white !important;
+}
+input {
+  border: none;
+  margin: 5px;
+  outline: none;
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+nav {
+  background-color: #ff7700 !important;
+  height: 70px !important;
+  box-shadow: 0 5px 5px grey !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+  color: black !important;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  background-size: 100%, 100%;
+  background-image: none;
+}
+.carousel-control-next-icon:after {
+  content: ">";
+  font-weight: bolder;
+  font-size: 35px;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.carousel-control-prev-icon:after {
+  content: "<";
+  font-size: 35px;
+  color: black;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.dropdownItems:hover {
+  color: #ff7700 !important;
+  background-color: #232b2b !important;
+}
+a:hover {
+  text-decoration: none !important;
+  color: white !important;
+  transition: 0.2s;
+}
+.carouselButton {
+  background: black;
+  margin-top: 10px;
+  font-weight: bolder;
+  padding: 5px 20px;
+  color: #ff7700;
+  border: none;
+  border-radius: 18px;
+}
+.carouselButton:hover {
+  background: #ff7700;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  transition: 0.4s;
 }
