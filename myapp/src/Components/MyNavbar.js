@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import UserContext from "../ContextFolder/Context";
 
-function navbar() {
+function MyNavbar() {
   const context = useContext(UserContext);
   return (
     <>
@@ -81,19 +81,28 @@ function navbar() {
             {context.myStateData.loggedIn ? (
               <div
                 className="d-flex justify-content-between align-items-center"
-                style={{ width: "280px" }}
+                style={{ width: "auto" }}
               >
                 <NavLink to="/payment">
                   {context.myStateData.chart.length !== 0 ? (
-                    <h5 className="ml-2">{context.myStateData.chart.length}</h5>
+                    <h5
+                      className="font-weight-bolder"
+                      style={{
+                        marginLeft: "13px",
+                        marginBottom: "0",
+                        fontSize: "1.5rem",
+                      }}
+                    >
+                      {context.myStateData.chart.length}
+                    </h5>
                   ) : null}
                   <i
                     className="fas fa-shopping-cart"
-                    style={{ fontSize: "1.6rem", marginTop: "-5px" }}
+                    style={{ fontSize: "1.9rem", marginTop: "-5px" }}
                   ></i>
                 </NavLink>
 
-                <div className="mt-1 text-center">
+                <div className="mt-1 text-center mx-3">
                   <p className="mb-0">Logged:</p>
                   <b style={{ fontSize: "1.3rem" }}>
                     {context.myStateData.userName}
@@ -136,4 +145,4 @@ function navbar() {
   );
 }
 
-export default navbar;
+export default MyNavbar;

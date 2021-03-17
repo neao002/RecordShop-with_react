@@ -1,17 +1,16 @@
 import React, { useReducer, useEffect, createContext } from "react";
 import { Albums } from "./AlbumsObject";
+import { CarouselAlbums } from "./CarouselAlbums";
+import { Chart } from "./Chart";
 const UserContext = createContext();
 const initialState = {
   userName: "Murat",
   loggedIn: false,
   popUp: false,
-  carouselAlbums: [
-    { id: 1, title: "", content: "", price: 0 },
-    { id: 1, title: "", content: "", price: 0 },
-    { id: 1, title: "", content: "", price: 0 },
-  ],
+  //! imported arrays as external for cleaner outlook
+  carouselAlbums: CarouselAlbums,
   albums: Albums,
-  chart: [],
+  chart: Chart,
 };
 const reducer = (state, action) => {
   switch (action.type) {
@@ -36,10 +35,13 @@ const reducer = (state, action) => {
       const addIndex = state.albums.findIndex((album) => {
         return album.id == action.payload;
       });
-      return {
-        ...state,
-        chart: [...state.chart, state.albums[addIndex]],
-      };
+      if (state.loggedIn) {
+        return {
+          ...state,
+          chart: [...state.chart, state.albums[addIndex]],
+        };
+      }
+
     case "LOGOUT":
       return {
         ...state,

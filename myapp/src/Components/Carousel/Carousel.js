@@ -1,10 +1,15 @@
-import React from "react";
+import { useContext } from "react";
 import { Carousel } from "react-bootstrap";
-import Vinyl from "../assets/img/carousel/vinyl.jpeg";
-import SecondVinyl from "../assets/img/carousel/secondVinly.jpeg";
-import ThirdVinyl from "../assets/img/carousel/thirdVinly.jpeg";
-import FourthVinyl from "../assets/img/carousel/fourthVinly.jpeg";
+import UserContext from "../../ContextFolder/Context";
 function carousel() {
+  const context = useContext(UserContext);
+  //! add to chart will connect to button but we can create carousel items with map
+  const addToChart = (dispatch) => {
+    dispatch({
+      type: "ADD_CHART",
+      payload: props.id,
+    });
+  };
   return (
     <>
       <Carousel
@@ -37,7 +42,7 @@ function carousel() {
 
             <img
               style={{ height: "30vh", width: "35%" }}
-              src={Vinyl}
+              // src={Vinyl}
               alt="First slide"
             />
           </div>
@@ -63,7 +68,7 @@ function carousel() {
 
             <img
               style={{ height: "30vh", width: "35%" }}
-              src={SecondVinyl}
+              // src={SecondVinyl}
               alt="Second slide"
             />
           </div>
@@ -89,7 +94,7 @@ function carousel() {
 
             <img
               style={{ height: "30vh", width: "35%" }}
-              src={ThirdVinyl}
+              // src={ThirdVinyl}
               alt="Third slide"
             />
           </div>
@@ -115,7 +120,7 @@ function carousel() {
 
             <img
               style={{ height: "30vh", width: "35%" }}
-              src={FourthVinyl}
+              // src={FourthVinyl}
               alt="Fourth slide"
             />
           </div>

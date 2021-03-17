@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../../ContextFolder/Context";
-function thumbnailAlbum(props) {
+function ThumbnailAlbum(props) {
   const context = useContext(UserContext);
   const addToChart = (dispatch) => {
     dispatch({
@@ -13,10 +13,13 @@ function thumbnailAlbum(props) {
     <div
       className="px-1 pt-3 mb-4 mx-auto d-flex justify-content-between"
       style={{
-        border: "1px solid lightgrey",
-        width: "30%",
-        height: "250px",
-        borderRadius: "5px",
+        // border: "1px solid grey",
+
+        //I add the style directly to the Link element in => MainAlbumContainer
+
+        // width: "30%",
+        // height: "250px",
+        borderRadius: "15px",
       }}
     >
       <div
@@ -54,4 +57,4 @@ function thumbnailAlbum(props) {
   );
 }
 
-export default thumbnailAlbum;
+export default ThumbnailAlbum;

@@ -35,7 +35,6 @@ export default function Example() {
             type="text"
             style={{
               background: "#ff7700",
-              color: "white",
               fontSize: "1.2rem",
               fontWeight: "bolder",
               padding: "3px 5px",
@@ -45,9 +44,7 @@ export default function Example() {
             }}
             className="mt-2"
           ></input>
-          <h4 className="mt-4" style={{ color: "#ff7700" }}>
-            Please, Log in for shopping ...
-          </h4>
+          <h4 className="mt-4">Please, Log in for shopping ...</h4>
         </Modal.Body>
         <Modal.Footer>
           <Button
@@ -59,6 +56,7 @@ export default function Example() {
             Close
           </Button>
           <Button
+            className="popUpLogin "
             onClick={() => {
               enterNameHandler(context.myDispatch);
             }}

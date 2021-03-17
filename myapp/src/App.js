@@ -4,10 +4,12 @@ import "./App.css";
 import UserContext from "./ContextFolder/Context";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //! Components
-import Navbar from "./Components/Navbar";
-import Carousel from "./Components/Carousel";
+
+import Navbar from "./Components/MyNavbar";
+import Carousel from "./Components/Carousel/Carousel";
 import PopUp from "./Components/LoginPopup";
 import MainAlbumContainer from "./Components/MainAlbumContainer";
+import AlbumPage from "./Components/AlbumPage/AlbumPageContainer";
 function App() {
   const context = useContext(UserContext);
   return (
@@ -28,6 +30,7 @@ function App() {
               return <h1>bestseller</h1>;
             }}
           ></Route>
+          <Route path="/album" component={AlbumPage} />
           <Route
             //? trying
             path="/payment"

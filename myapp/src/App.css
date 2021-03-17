@@ -50,7 +50,7 @@ a:hover {
   transition: 0.2s;
 }
 .carouselButton {
-  background: black;
+  background: #343a40 !important;
   margin-top: 10px;
   font-weight: bolder;
   padding: 5px 20px;
@@ -59,7 +59,18 @@ a:hover {
   border-radius: 18px;
 }
 .carouselButton:hover {
-  background: #ff7700;
+  background: #ff7700 !important;
   color: white;
-  transition: 0.4s;
+  transition: 0.2s;
+}
+.popUpLogin {
+  background: #ff7700 !important;
+}
+.popUpLogin:hover {
+  background: #dd6802 !important;
+  /* color: black !important; */
+}
+.modal-header,
+.modal-footer {
+  border: none !important;
 }

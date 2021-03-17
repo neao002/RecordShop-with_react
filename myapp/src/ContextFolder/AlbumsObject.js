@@ -29,7 +29,7 @@ export const Albums = [
     title: "Are You Experienced?",
     releaseYear: "1967",
     genre: "Rock",
-    price: "21.99",
+    price: 21.99,
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ export const Albums = [
     title: "The Joshua Tree",
     releaseYear: "1987",
     genre: "Rock",
-    price: "38.94",
+    price: 38.94,
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const Albums = [
     title: "Abbey Road",
     releaseYear: "1969",
     genre: "Rock",
-    price: "21.85",
+    price: 21.85,
   },
   {
     id: 7,
@@ -53,7 +53,7 @@ export const Albums = [
     title: "Rumours",
     releaseYear: "1977",
     genre: "Rock",
-    price: "21.85",
+    price: 21.85,
   },
   {
     id: 8,
@@ -61,7 +61,7 @@ export const Albums = [
     title: "Sun Sessions",
     releaseYear: "1976",
     genre: "Rock",
-    price: "26.99",
+    price: 26.99,
   },
   {
     id: 9,
@@ -69,7 +69,7 @@ export const Albums = [
     title: "Thriller",
     releaseYear: "1982",
     genre: "Pop",
-    price: "20.99",
+    price: 20.99,
   },
   {
     id: 10,
@@ -77,7 +77,7 @@ export const Albums = [
     title: "Exile on Main Street",
     releaseYear: "1972",
     genre: "Rock",
-    price: "29.99",
+    price: 29.99,
   },
   {
     id: 11,
