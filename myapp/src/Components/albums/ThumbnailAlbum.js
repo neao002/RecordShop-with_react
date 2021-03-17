@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import UserContext from "../../Context/context";
+import UserContext from "../../ContextFolder/Context";
 function thumbnailAlbum(props) {
   const context = useContext(UserContext);
   const addToChart = (dispatch) => {
@@ -11,17 +11,17 @@ function thumbnailAlbum(props) {
   };
   return (
     <div
-      className="p-1 mb-4 mx-auto d-flex justify-content-between"
+      className="px-1 pt-3 mb-4 mx-auto d-flex justify-content-between"
       style={{
-        // border: "1px solid grey",
+        border: "1px solid lightgrey",
         width: "30%",
         height: "250px",
-        borderRadius: "15px",
+        borderRadius: "5px",
       }}
     >
       <div
-        className="d-flex justify-content-between flex-column pb-2 px-1"
-        style={{ width: "48%", height: "80%" }}
+        className="d-flex justify-content-between flex-column my-auto px-1"
+        style={{ width: "50%", height: "200px" }}
       >
         <p className="text-secondary">{props.releasedYear}</p>
         <div className="d-flex justify-content-center flex-column">
@@ -44,8 +44,9 @@ function thumbnailAlbum(props) {
       <div style={{ width: "50%" }}>
         <Link to="/">
           <img
+            className="mt-2"
             src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8eW91dHViZSUyMHRodW1ibmFpbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
-            style={{ width: "80%", height: "85%", borderRadius: "5px" }}
+            style={{ width: "100%", height: "80%", borderRadius: "5px" }}
           ></img>
         </Link>
       </div>

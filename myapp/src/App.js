@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import UserContext from "./Context/context";
+import UserContext from "./ContextFolder/Context";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //! Components
-import Navbar from "./Components/navbar";
+import Navbar from "./Components/Navbar";
 import Carousel from "./Components/Carousel";
-import PopUp from "./Components/loginPopup";
-import MainAlbumContainer from "./Components/mainAlbumContainer";
+import PopUp from "./Components/LoginPopup";
+import MainAlbumContainer from "./Components/MainAlbumContainer";
 function App() {
   const context = useContext(UserContext);
   return (
@@ -26,6 +26,14 @@ function App() {
             exact
             component={() => {
               return <h1>bestseller</h1>;
+            }}
+          ></Route>
+          <Route
+            //? trying
+            path="/payment"
+            exact
+            component={() => {
+              return <h1>Payment Part</h1>;
             }}
           ></Route>
         </Switch>

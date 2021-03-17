@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
-import UserContext from "../Context/context";
+import UserContext from "../ContextFolder/Context";
 
 function navbar() {
   const context = useContext(UserContext);
@@ -81,9 +81,9 @@ function navbar() {
             {context.myStateData.loggedIn ? (
               <div
                 className="d-flex justify-content-between align-items-center"
-                style={{ width: "200px" }}
+                style={{ width: "280px" }}
               >
-                <NavLink to="/chart">
+                <NavLink to="/payment">
                   {context.myStateData.chart.length !== 0 ? (
                     <h5 className="ml-2">{context.myStateData.chart.length}</h5>
                   ) : null}
@@ -93,9 +93,23 @@ function navbar() {
                   ></i>
                 </NavLink>
 
-                <h3 className="mt-2 text-right pr-3">
-                  Logged: {context.myStateData.userName}
-                </h3>
+                <div className="mt-1 text-center">
+                  <p className="mb-0">Logged:</p>
+                  <b style={{ fontSize: "1.3rem" }}>
+                    {context.myStateData.userName}
+                  </b>
+                </div>
+                <button
+                  className="btn-dark mr-1 mt-1"
+                  style={{ padding: "1px 4px", fontSize: "1.2rem" }}
+                  onClick={() =>
+                    context.myDispatch({
+                      type: "LOGOUT",
+                    })
+                  }
+                >
+                  SING OUT
+                </button>
               </div>
             ) : (
               <div className="d-flex justify-content-between">

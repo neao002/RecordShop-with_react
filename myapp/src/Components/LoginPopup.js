@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { Button, Modal } from "react-bootstrap";
-import UserContext from "../Context/context";
+import UserContext from "../ContextFolder/Context";
 export default function Example() {
   const [show, setShow] = useState(true);
   const [userName, setUserName] = useState("");
@@ -26,21 +26,32 @@ export default function Example() {
         keyboard={false}
       >
         <Modal.Header>
-          <Modal.Title>Hello dear Guest!</Modal.Title>
+          <Modal.Title className="mx-auto" style={{ color: "#ff7700" }}>
+            Hello dear Guest!
+          </Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body className="text-center">
           <input
             type="text"
+            style={{
+              background: "#ff7700",
+              color: "white",
+              fontSize: "1.2rem",
+              fontWeight: "bolder",
+              padding: "3px 5px",
+            }}
             onChange={(e) => {
               setUserName(e.target.value);
             }}
-            className="mb-3"
+            className="mt-2"
           ></input>
-          <p>Please, Log in for shopping ...</p>
+          <h4 className="mt-4" style={{ color: "#ff7700" }}>
+            Please, Log in for shopping ...
+          </h4>
         </Modal.Body>
         <Modal.Footer>
           <Button
-            variant="secondary"
+            variant="danger"
             onClick={() => {
               closePopUp(context.myDispatch);
             }}
@@ -48,7 +59,6 @@ export default function Example() {
             Close
           </Button>
           <Button
-            variant="primary"
             onClick={() => {
               enterNameHandler(context.myDispatch);
             }}
