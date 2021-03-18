@@ -7,10 +7,10 @@ const initialState = {
   userName: "Murat",
   loggedIn: false,
   popUp: false,
-  //! imported arrays as external for cleaner outlook
   carouselAlbums: CarouselAlbums,
   albums: Albums,
   chart: Chart,
+  searchResult: [],
 };
 const reducer = (state, action) => {
   switch (action.type) {
@@ -41,7 +41,6 @@ const reducer = (state, action) => {
           chart: [...state.chart, state.albums[addIndex]],
         };
       }
-
     case "LOGOUT":
       return {
         ...state,
@@ -60,7 +59,7 @@ export function ContextProvider(props) {
         dispatch({
           type: "BRING_POPUP",
         });
-      }, 1000);
+      }, 500);
     }
   }, []);
 

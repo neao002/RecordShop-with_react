@@ -1,29 +1,45 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import ThumbNail from "./ThumbnailAlbum";
 import UserContext from "../../ContextFolder/Context";
 import { Link } from "react-router-dom";
 
 function MainAlbumContainer() {
+  const [searchTerm, setSearchTerm] = useState("");
   const context = useContext(UserContext);
-  const addToChart = (dispatch, albumId) => {
-    console.log(albumId)
-    dispatch({
-      type: "ADD_CHART",
-      payload: albumId,
-    });
-  };
   return (
     <div className="mx-auto" style={{ width: "80%" }}>
-      <h1 className="bg-dark mx-4 py-2 px-4 mb-4" style={{ color: "#ff7700" }}>
+      <h1 className=" bg-dark mx-4 py-2 px-4 mb-4" style={{ color: "#ff7700" }}>
         Latest
+        <input
+          className="ml-5"
+          type="text"
+          placeholder="Search your Fav Music"
+          onChange={(event) => {
+            setSearchTerm(event.target.value);
+          }}
+        />
+        <button className="ml-5">Click here</button>
       </h1>
-      <div className="d-flex flex-wrap justify-content-start">
-        {context.myStateData.albums.map((album) => {
-          return (
-       
-            <div style={{ width: "25%"}} className='d-flex flex-column  justify-content-center '>
 
-              <Link to={{ pathname: '/album', state: { album: album } }} >
+      <div className="d-flex flex-wrap justify-content-start">
+        {context.myStateData.albums
+          .filter((values) => {
+            if (searchTerm == "") {
+              return values;
+            } else if (
+              values.title
+                .toLowerCase()
+                .includes(searchTerm.toLocaleLowerCase())
+            ) {
+              return values;
+            }
+          })
+          .map((album) => {
+            return (
+              //! when we put all container in link,the button(add to chart) gets disabled,we need to find a solution for it
+              //! i kept inside div for now
+              // <Link to="/album" style={{ width: "32%", height: "260px" }}>
+              <div style={{ width: "32%", height: "260px" }}>
                 <ThumbNail
                   key={album.id}
                   id={album.id}
@@ -32,22 +48,10 @@ function MainAlbumContainer() {
                   releasedYear={album.releaseYear}
                   price={album.price}
                 ></ThumbNail>
-
-              </Link>
-              <button
-                className="btn-primary mb-5 "
-                style = {{width:'30%', alignSelf:'center'}}
-                onClick={() => {
-                  addToChart(context.myDispatch, album.id);
-                }}
-              >  Add
-            </button>
-
-
-            </div>
-
-          );
-        })}
+              </div>
+              // </Link>
+            );
+          })}
       </div>
     </div>
   );
