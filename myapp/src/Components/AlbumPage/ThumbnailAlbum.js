@@ -12,19 +12,9 @@ function ThumbnailAlbum(props) {
   return (
     <div
       className="px-1 pt-3 mx-auto d-flex flex-column justify-content-center align-items-center mb-5"
-      style={{
-        // border: "1px solid grey",
+      style={{ borderRadius: "15px" }}>
 
-        //I add the style directly to the Link element in => MainAlbumContainer
-
-        // width: "30%",
-        // height: "250px",
-        borderRadius: "15px",
-       
-      }}
-    >
-
-      <div style={{ width: "50%", height: '200px' }}>
+      <div style={{ height: '200px' }}>
         {/* <Link to="/"> */}
         <img
           className="mt-2"
@@ -36,7 +26,7 @@ function ThumbnailAlbum(props) {
       <div
         // className="d-flex justify-content-between flex-column my-auto px-1"
         className="d-flex justify-content-between flex-column  px-1"
-        style={{ width: "50%", height: "150px" }}
+        style={{height: "150px" }}
       >
         <p className="text-secondary">{props.releasedYear}</p>
         <div className="d-flex justify-content-center flex-column">
