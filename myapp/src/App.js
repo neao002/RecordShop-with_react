@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Jumbotron } from "react-bootstrap";
 import "./App.css";
 import UserContext from "./ContextFolder/Context";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -11,6 +12,7 @@ import MainAlbumContainer from "./Components/AlbumPage/MainAlbumContainer";
 import AlbumPage from "./Components/AlbumPage/AlbumPageContainer";
 // contact, do not forget to add ur packages, you can find them in description!
 import Contacts from "./Components/ContactForm/Contacts";
+import { Footer } from "./Components/Footer/Footer";
 
 function App() {
   const context = useContext(UserContext);
@@ -42,10 +44,10 @@ function App() {
             }}
           ></Route>
         </Switch>
-
         {/* Contact Form */}
         <Contacts />
-        {/* Footer comes bottom */}
+        {/* Footer */}
+        <Footer />
       </div>
     </Router>
   );

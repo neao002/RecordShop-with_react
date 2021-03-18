@@ -148,6 +148,15 @@ const Contacts = () => {
                   Contact Us
                 </button>
               </div>
+              <span className="error-message">
+                {errors.description && errors.description.message}
+              </span>
+              <button
+                className="btn-main-offer ml-5 mt-5 contact-btn"
+                type="submit"
+              >
+                Contact Us
+              </button>
             </div>
           </form>
         </div>
