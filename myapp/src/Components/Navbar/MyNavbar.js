@@ -25,9 +25,7 @@ function MyNavbar() {
             VINILO
           </h1>
         </Navbar.Brand>
-        <form>
-          <input placeholder="search your music" />
-        </form>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav
