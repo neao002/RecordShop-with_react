@@ -10,7 +10,7 @@ import {
   LinkedinIcon,
 } from "react-share";
 
-export const Footer = () => {
+function Footer() {
   return (
     <div>
       <div className="footer">
@@ -19,7 +19,6 @@ export const Footer = () => {
             <div className="col-lg-4 col-md-6 col-sm-6">
               <div className="d-flex mr-5">
                 <p>
-                  {" "}
                   <span className="bg-green"> Our Shop is in </span> :
                   HoeppnerStr. Berlin. 12101
                 </p>
@@ -32,7 +31,7 @@ export const Footer = () => {
               </div>
             </div>
 
-            <div className="col">
+            <div className="col-md-4">
               <a className="footer-nav">Home</a>
               <br />
               <a className="footer-nav">About Us</a>
@@ -41,7 +40,7 @@ export const Footer = () => {
               <br />
             </div>
           </div>
-          <div className="col-lg-5 col-md-5 col-sm-6 align-items-center ">
+          <div className="d-flex mt-5 col-lg-5 col-md-5 col-sm-6 align-items-center ">
             <div className="d-flex justify-content-center socialmedia">
               <h2>Stay Connected!</h2>
               <FacebookShareButton url={"https://www.facebook.com/"}>
@@ -54,8 +53,7 @@ export const Footer = () => {
                 <LinkedinIcon className="mx-3" />
               </LineShareButton>
             </div>
-            <p ClassName="pt-3 text-center">
-              {" "}
+            <p>
               Copyright&copy;{new Date().getFullYear()}
               &nbsp; Nico,Murat,Pietro,Rodrigo,Ahmad @Vinilo.eu
             </p>
@@ -64,4 +62,5 @@ export const Footer = () => {
       </div>
     </div>
   );
-};
+}
+export default Footer;

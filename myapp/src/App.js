@@ -11,12 +11,10 @@ import Carousel from "./Components/Carousel/Carousel";
 import PopUp from "./Components/PopUp/LoginPopup";
 import MainAlbumContainer from "./Components/AlbumPage/MainAlbumContainer";
 import AlbumPage from "./Components/AlbumPage/AlbumPageContainer";
-
 // contact, do not forget to add ur packages, you can find them in description!
 import Contacts from "./Components/ContactForm/Contacts";
-
-// footer
-import { Footer } from "./Components/Footer/Footer";
+import Footer from "./Components/Footer/Footer";
+import SearchResult from "./Components/searchResult/SearchResult";
 
 function App() {
   const context = useContext(UserContext);
@@ -29,6 +27,10 @@ function App() {
             <Carousel></Carousel>
             {context.myStateData.popUp ? <PopUp></PopUp> : null}
             <MainAlbumContainer></MainAlbumContainer>
+          </Route>
+          <Route path="/searchresult">
+            <Carousel></Carousel>
+            <SearchResult></SearchResult>
           </Route>
           <Route
             //? trying
@@ -43,10 +45,11 @@ function App() {
             //? trying
             path="/payment"
             exact
-            component={() => {
-              return <h1>Payment Part</h1>;
-            }}
-          ></Route>
+            component
+          >
+            {/* Ahmad works on it */}
+            {/* <Payment></Payment> */}
+          </Route>
         </Switch>
         {/* Contact Form */}
         <Contacts />

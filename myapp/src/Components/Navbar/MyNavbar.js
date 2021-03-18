@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav, NavDropdown, Menu } from "react-bootstrap";
 import UserContext from "../../ContextFolder/Context";
 
 function MyNavbar() {
   const context = useContext(UserContext);
-
   return (
     <>
       <Navbar collapseOnSelect expand="lg" variant="dark">
@@ -25,7 +24,6 @@ function MyNavbar() {
             VINILO
           </h1>
         </Navbar.Brand>
-
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav
