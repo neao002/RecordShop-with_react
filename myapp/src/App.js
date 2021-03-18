@@ -5,18 +5,13 @@ import "./App.css";
 import UserContext from "./ContextFolder/Context";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //! Components
-
 import Navbar from "./Components/Navbar/MyNavbar";
 import Carousel from "./Components/Carousel/Carousel";
 import PopUp from "./Components/PopUp/LoginPopup";
 import MainAlbumContainer from "./Components/AlbumPage/MainAlbumContainer";
 import AlbumPage from "./Components/AlbumPage/AlbumPageContainer";
-
-// contact, dont forget to add ur packages, you can find them in description!
+// contact, do not forget to add ur packages, you can find them in description!
 import Contacts from "./Components/ContactForm/Contacts";
-
-// adding footer
-
 import { Footer } from "./Components/Footer/Footer";
 
 function App() {
@@ -49,10 +44,9 @@ function App() {
             }}
           ></Route>
         </Switch>
-        {/* //! footer comes bottom */}
-        <Jumbotron Fluid>
-          <Contacts />
-        </Jumbotron>
+        {/* Contact Form */}
+        <Contacts />
+        {/* Footer */}
         <Footer />
       </div>
     </Router>
