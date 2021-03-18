@@ -11,11 +11,11 @@
 
 ## Must be packages
 
-npm i emailjs-com
-npm i react-hook-form
-npm i react-router-dom
-npm i react-bootstrap bootstrap
-npm install react-share --save
+### npm i emailjs-com
+### npm i react-hook-form
+### npm i react-router-dom
+### npm i react-bootstrap bootstrap
+### npm install react-share --save
 
 contact form :
 
