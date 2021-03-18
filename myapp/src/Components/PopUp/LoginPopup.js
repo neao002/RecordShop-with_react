@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
-import UserContext from "../ContextFolder/Context";
+import UserContext from "../../ContextFolder/Context";
 export default function Example(props) {
   const [show, setShow] = useState(true);
   const [userName, setUserName] = useState("");
@@ -69,7 +69,7 @@ export default function Example(props) {
             <Form>
               <Form.Group controlId="formBasicEmail">
                 <Form.Label className="mt-2">
-                  Subscribe to our NewsLetter <br /> Write down your email:{" "}
+                  Subscribe to our NewsLetter <br /> Write down your email:
                 </Form.Label>
                 <Form.Control type="email" placeholder="Enter email" />
                 <Form.Text className="text-muted">

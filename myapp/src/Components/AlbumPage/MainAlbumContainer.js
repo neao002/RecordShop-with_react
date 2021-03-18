@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import ThumbNail from "./albums/ThumbnailAlbum";
-import UserContext from "../ContextFolder/Context";
+import ThumbNail from "./ThumbnailAlbum";
+import UserContext from "../../ContextFolder/Context";
 import { Link } from "react-router-dom";
 function MainAlbumContainer() {
   const context = useContext(UserContext);
@@ -25,7 +25,6 @@ function MainAlbumContainer() {
                 price={album.price}
               ></ThumbNail>
             </div>
-
             // </Link>
           );
         })}
