@@ -18,7 +18,6 @@ function MainAlbumContainer() {
             setSearchTerm(event.target.value);
           }}
         />
-        <button className="ml-5">Click here</button>
       </h1>
 
       <div className="d-flex flex-wrap justify-content-start">
