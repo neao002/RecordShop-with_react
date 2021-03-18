@@ -54,6 +54,11 @@ export const Footer = () => {
                 <LinkedinIcon className="mx-3" />
               </LineShareButton>
             </div>
+            <p ClassName="pt-3 text-center">
+              {" "}
+              Copyright&copy;{new Date().getFullYear()}
+              &nbsp; Nico,Murat,Pietro,Rodrigo,Ahmad @Vinilo.eu
+            </p>
           </div>
         </div>
       </div>
