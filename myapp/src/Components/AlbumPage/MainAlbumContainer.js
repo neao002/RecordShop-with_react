@@ -2,7 +2,7 @@ import { useContext } from "react";
 import ThumbNail from "./ThumbnailAlbum";
 import UserContext from "../../ContextFolder/Context";
 import { Link } from "react-router-dom";
-import { Col, Row } from 'react-bootstrap'
+
 function MainAlbumContainer() {
   const context = useContext(UserContext);
   const addToChart = (dispatch, albumId) => {
@@ -20,10 +20,8 @@ function MainAlbumContainer() {
       <div className="d-flex flex-wrap justify-content-start">
         {context.myStateData.albums.map((album) => {
           return (
-            //! when we put all container in link,the button(add to chart) gets disabled,we need to find a solution for it
-            //! i kept inside div for now
-            // <Link to="/album" style={{ width: "32%", height: "260px" }}>
-            <div style={{ width: "25%", border: '1px solid black'}} className='d-flex flex-column mb-5 justify-content-center '>
+       
+            <div style={{ width: "25%"}} className='d-flex flex-column  justify-content-center '>
 
               <Link to={{ pathname: '/album', state: { album: album } }} >
                 <ThumbNail
