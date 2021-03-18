@@ -1,10 +1,12 @@
 import { useState, useContext } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 import UserContext from "../../ContextFolder/Context";
+
 export default function Example(props) {
   const [show, setShow] = useState(true);
   const [userName, setUserName] = useState("");
   const context = useContext(UserContext);
+
   const handleClose = () => setShow(false);
   const enterNameHandler = (dispatch) => {
     dispatch({
@@ -27,7 +29,7 @@ export default function Example(props) {
       >
         <Modal.Header>
           <Modal.Title className="mx-auto" style={{ color: "#ff7700" }}>
-            Hello dear Guest!
+            Welcome Back!
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className="text-center">
@@ -46,6 +48,23 @@ export default function Example(props) {
           ></input>
           <h4 className="mt-4">Please, Log in for shopping ...</h4>
         </Modal.Body>
+
+        <div className="popup ml-5 mr-5">
+          <div className="popup-main">
+            <Form>
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label className="mt-2 ml-5">
+                  Subscribe to our NewsLetter
+                </Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Text name="name" className="text-muted">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+              </Form.Group>
+            </Form>
+          </div>
+        </div>
+
         <Modal.Footer>
           <Button
             variant="danger"
@@ -64,22 +83,6 @@ export default function Example(props) {
             Log In
           </Button>
         </Modal.Footer>
-        <div className="popup ml-5 mr-5">
-          <div className="popup-main">
-            <Form>
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label className="mt-2">
-                  Subscribe to our NewsLetter <br /> Write down your email:
-                </Form.Label>
-                <Form.Control type="email" placeholder="Enter email" />
-                <Form.Text className="text-muted">
-                  We'll never share your email with anyone else.
-                </Form.Text>
-              </Form.Group>
-              <Button className="ml-5 mb-4">Send</Button>
-            </Form>
-          </div>
-        </div>
       </Modal>
     </>
   );
