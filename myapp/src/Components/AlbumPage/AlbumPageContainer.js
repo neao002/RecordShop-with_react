@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import Hero from './AlbumTemplateHero'
 import Carousel from './AlbumBottomSuggestions'
@@ -15,5 +16,18 @@ const AlbumPageContainer = () => {
         </div>
     )
 }
+=======
+import React from "react";
+import Hero from "./AlbumTemplateHero";
+import Carousel from "./AlbumBottomSuggestions";
 
-export default AlbumPageContainer
+const AlbumPageContainer = () => {
+  return (
+    <div>
+      <p>album page container</p>
+    </div>
+  );
+};
+>>>>>>> 050fc06f1ea8277d0b225653f8ea9025b0524081
+
+export default AlbumPageContainer;
