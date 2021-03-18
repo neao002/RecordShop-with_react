@@ -2,13 +2,13 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../../Context/Context";
 function ThumbnailAlbum(props) {
-  const context = useContext(UserContext);
-  const addToChart = (dispatch) => {
-    dispatch({
-      type: "ADD_CHART",
-      payload: props.id,
-    });
-  };
+  // const context = useContext(UserContext);
+  // const addToChart = (dispatch) => {
+  //   dispatch({
+  //     type: "ADD_CHART",
+  //     payload: props.id,
+  //   });
+  // };
   return (
     <div
       className="p-1 mb-4 mx-auto d-flex justify-content-between"
@@ -32,14 +32,14 @@ function ThumbnailAlbum(props) {
           <p>{props.artist}</p>
 
           <p>Price:{props.price} €</p>
-          <button
+          {/* <button
             className="btn-primary w-75 h-25"
             onClick={() => {
               addToChart(context.myDispatch);
             }}
           >
             Add to the chart
-          </button>
+          </button> */}
           <p className="text-secondary">{props.genre}</p>
         </div>
       </div>
