@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Modal, Form } from "react-bootstrap";
 import UserContext from "../../ContextFolder/Context";
-export default function Example() {
+export default function Example(props) {
   const [show, setShow] = useState(true);
   const [userName, setUserName] = useState("");
   const context = useContext(UserContext);
@@ -64,6 +64,22 @@ export default function Example() {
             Log In
           </Button>
         </Modal.Footer>
+        <div className="popup ml-5 mr-5">
+          <div className="popup-main">
+            <Form>
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label className="mt-2">
+                  Subscribe to our NewsLetter <br /> Write down your email:
+                </Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+                <Form.Text className="text-muted">
+                  We'll never share your email with anyone else.
+                </Form.Text>
+              </Form.Group>
+              <Button className="ml-5 mb-4">Send</Button>
+            </Form>
+          </div>
+        </div>
       </Modal>
     </>
   );
