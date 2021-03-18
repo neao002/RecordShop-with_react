@@ -40,18 +40,19 @@ function MainAlbumContainer() {
             return (
               //! when we put all container in link,the button(add to chart) gets disabled,we need to find a solution for it
               //! i kept inside div for now
-              // <Link to="/album" style={{ width: "32%", height: "260px" }}>
+
               <div style={{ width: "32%", height: "460px" }}>
-                <ThumbNail
-                  key={album.id}
-                  id={album.id}
-                  title={album.title}
-                  artist={album.artist}
-                  releasedYear={album.releaseYear}
-                  price={album.price}
-                ></ThumbNail>
+                <Link to={{ pathname: "/album", state: { album: album } }}>
+                  <ThumbNail
+                    key={album.id}
+                    id={album.id}
+                    title={album.title}
+                    artist={album.artist}
+                    releasedYear={album.releaseYear}
+                    price={album.price}
+                  ></ThumbNail>
+                </Link>
               </div>
-              // </Link>
             );
           })}
       </div>
