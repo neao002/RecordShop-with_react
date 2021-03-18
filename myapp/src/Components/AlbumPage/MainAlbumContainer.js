@@ -8,7 +8,10 @@ function MainAlbumContainer() {
   const context = useContext(UserContext);
   return (
     <div className="mx-auto" style={{ width: "80%" }}>
-      <h1 className=" bg-dark mx-4 py-2 px-4 mb-4" style={{ color: "#ff7700" }}>
+      <h1
+        className=" bg-dark mx-auto py-2 px-4 mb-4"
+        style={{ color: "#ff7700" }}
+      >
         Latest
         <input
           className="ml-5"
@@ -18,7 +21,6 @@ function MainAlbumContainer() {
             setSearchTerm(event.target.value);
           }}
         />
-        <button className="ml-5">Click here</button>
       </h1>
 
       <div className="d-flex flex-wrap justify-content-start">
@@ -39,7 +41,7 @@ function MainAlbumContainer() {
               //! when we put all container in link,the button(add to chart) gets disabled,we need to find a solution for it
               //! i kept inside div for now
               // <Link to="/album" style={{ width: "32%", height: "260px" }}>
-              <div style={{ width: "32%", height: "260px" }}>
+              <div style={{ width: "32%", height: "460px" }}>
                 <ThumbNail
                   key={album.id}
                   id={album.id}
