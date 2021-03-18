@@ -11,14 +11,22 @@ function ThumbnailAlbum(props) {
   // };
   return (
     <div
-      className="px-1 pt-3 mb-4 mx-auto d-flex justify-content-between"
-      style={{
-        borderRadius: "15px",
-      }}
+      className="px-1 pt-3 mx-auto d-flex flex-column justify-content-center align-items-center mb-5"
+      style={{ borderRadius: "15px" }}
     >
+      <div style={{ height: "200px" }}>
+        {/* <Link to="/"> */}
+        <img
+          className="mt-2"
+          src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8eW91dHViZSUyMHRodW1ibmFpbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+          style={{ width: "100%", height: "80%", borderRadius: "5px" }}
+        ></img>
+        {/* </Link> */}
+      </div>
       <div
-        className="d-flex justify-content-between flex-column my-auto px-1"
-        style={{ width: "50%", height: "200px" }}
+        // className="d-flex justify-content-between flex-column my-auto px-1"
+        className="d-flex justify-content-between flex-column  px-1"
+        style={{ height: "150px" }}
       >
         <p className="text-secondary">{props.releasedYear}</p>
         <div className="d-flex justify-content-center flex-column">
@@ -36,16 +44,6 @@ function ThumbnailAlbum(props) {
           </button> */}
           <p className="text-secondary">{props.genre}</p>
         </div>
-      </div>
-
-      <div style={{ width: "50%" }}>
-        <Link to="/">
-          <img
-            className="mt-2"
-            src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8eW91dHViZSUyMHRodW1ibmFpbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
-            style={{ width: "100%", height: "80%", borderRadius: "5px" }}
-          ></img>
-        </Link>
       </div>
     </div>
   );

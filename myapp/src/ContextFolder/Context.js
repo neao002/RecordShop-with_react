@@ -47,25 +47,6 @@ const reducer = (state, action) => {
         chart: [],
         loggedIn: false,
       };
-    case "SEARCHED":
-      const searched = [
-        state.albums.filter((album) => {
-          if (action.payload == "") {
-            return album;
-          } else if (
-            album.artist
-              .toLowerCase()
-              .includes(action.payload.toLocaleLowerCase())
-          ) {
-            return album;
-          }
-        }),
-      ];
-      console.log(searched);
-      return {
-        ...state,
-        searchResult: searched,
-      };
     default:
       break;
   }
@@ -78,7 +59,7 @@ export function ContextProvider(props) {
         dispatch({
           type: "BRING_POPUP",
         });
-      }, 1000);
+      }, 500);
     }
   }, []);
 

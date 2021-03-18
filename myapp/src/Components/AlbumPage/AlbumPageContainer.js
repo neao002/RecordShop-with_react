@@ -9,6 +9,8 @@ const AlbumPageContainer = () => {
   return (
     <div>
       <p>album page container</p>
+      <Hero albumData={location.state.album} />
+
       <p>{artist}</p>
       <p>{title}</p>
     </div>
