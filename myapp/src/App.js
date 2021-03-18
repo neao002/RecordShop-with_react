@@ -14,7 +14,6 @@ import AlbumPage from "./Components/AlbumPage/AlbumPageContainer";
 // contact, do not forget to add ur packages, you can find them in description!
 import Contacts from "./Components/ContactForm/Contacts";
 import Footer from "./Components/Footer/Footer";
-import SearchResult from "./Components/searchResult/SearchResult";
 
 function App() {
   const context = useContext(UserContext);
@@ -28,10 +27,7 @@ function App() {
             {context.myStateData.popUp ? <PopUp></PopUp> : null}
             <MainAlbumContainer></MainAlbumContainer>
           </Route>
-          <Route path="/searchresult">
-            <Carousel></Carousel>
-            <SearchResult></SearchResult>
-          </Route>
+
           <Route
             //? trying
             path="/bestsellers"
