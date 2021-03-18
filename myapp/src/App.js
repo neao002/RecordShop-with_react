@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Jumbotron } from "react-bootstrap";
 import "./App.css";
 import UserContext from "./ContextFolder/Context";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -13,7 +14,10 @@ import AlbumPage from "./Components/AlbumPage/AlbumPageContainer";
 
 // contact, dont forget to add ur packages, you can find them in description!
 import Contacts from "./Components/ContactForm/Contacts";
-import { Container, Jumbotron } from "react-bootstrap";
+
+// adding footer
+
+import { Footer } from "./Components/Footer/Footer";
 
 function App() {
   const context = useContext(UserContext);
@@ -49,6 +53,7 @@ function App() {
         <Jumbotron Fluid>
           <Contacts />
         </Jumbotron>
+        <Footer />
       </div>
     </Router>
   );
