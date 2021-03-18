@@ -10,6 +10,11 @@ import Carousel from "./Components/Carousel/Carousel";
 import PopUp from "./Components/LoginPopup";
 import MainAlbumContainer from "./Components/MainAlbumContainer";
 import AlbumPage from "./Components/AlbumPage/AlbumPageContainer";
+
+// contact, dont forget to add ur packages, you can find them in description!
+import Contacts from "./Components/ContactForm/Contacts";
+import { Container, Jumbotron } from "react-bootstrap";
+
 function App() {
   const context = useContext(UserContext);
   return (
@@ -41,6 +46,9 @@ function App() {
           ></Route>
         </Switch>
         {/* //! footer comes bottom */}
+        <Jumbotron Fluid>
+          <Contacts />
+        </Jumbotron>
       </div>
     </Router>
   );

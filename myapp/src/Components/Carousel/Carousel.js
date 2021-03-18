@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { Carousel } from "react-bootstrap";
 import UserContext from "../../ContextFolder/Context";
-function carousel() {
+
+function Carousell(props) {
   const context = useContext(UserContext);
   //! add to chart will connect to button but we can create carousel items with map
   const addToChart = (dispatch) => {
@@ -130,4 +131,4 @@ function carousel() {
   );
 }
 
-export default carousel;
+export default Carousell;
