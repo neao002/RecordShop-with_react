@@ -43,7 +43,7 @@ export const Footer = () => {
           </div>
           <div className="col-lg-5 col-md-5 col-sm-6 align-items-center ">
             <div className="d-flex justify-content-center socialmedia">
-              <h2>Stay Connected with Us!</h2>
+              <h2>Stay Connected!</h2>
               <FacebookShareButton url={"https://www.facebook.com/"}>
                 <FacebookIcon className="mx-3 " />
               </FacebookShareButton>
