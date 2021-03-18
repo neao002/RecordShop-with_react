@@ -48,6 +48,7 @@ const reducer = (state, action) => {
         chart: [],
         loggedIn: false,
       };
+
     default:
       break;
   }
@@ -60,7 +61,7 @@ export function ContextProvider(props) {
         dispatch({
           type: "BRING_POPUP",
         });
-      }, 1000);
+      }, 500);
     }
   }, []);
 
