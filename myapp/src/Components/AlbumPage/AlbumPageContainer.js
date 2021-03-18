@@ -1,18 +1,16 @@
 import React from "react";
 import Hero from "./AlbumTemplateHero";
-import Carousel from "./AlbumBottomSuggestions";
+import Suggestions from "./AlbumBottomSuggestions";
 import { useLocation } from "react-router-dom";
 const AlbumPageContainer = () => {
   let location = useLocation();
   console.log(location.state);
-  const { artist, title } = location.state.album;
+  const { genre } = location.state.album;
   return (
     <div>
-      <p>album page container</p>
-      <Hero albumData={location.state.album} />
-
-      <p>{artist}</p>
-      <p>{title}</p>
+      <Hero albumData={location.state.album}/>
+      <Suggestions albumGenre={genre}/>
+    
     </div>
   );
 };
