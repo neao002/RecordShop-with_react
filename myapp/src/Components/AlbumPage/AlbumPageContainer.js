@@ -9,7 +9,6 @@ const AlbumPageContainer = () => {
   return (
     <div>
       <p>album page container</p>
-
       <p>{artist}</p>
       <p>{title}</p>
     </div>

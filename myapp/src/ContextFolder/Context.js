@@ -7,10 +7,10 @@ const initialState = {
   userName: "Murat",
   loggedIn: false,
   popUp: false,
-  //! imported arrays as external for cleaner outlook
   carouselAlbums: CarouselAlbums,
   albums: Albums,
   chart: Chart,
+  searchResult: [],
 };
 const reducer = (state, action) => {
   switch (action.type) {
@@ -41,12 +41,30 @@ const reducer = (state, action) => {
           chart: [...state.chart, state.albums[addIndex]],
         };
       }
-
     case "LOGOUT":
       return {
         ...state,
         chart: [],
         loggedIn: false,
+      };
+    case "SEARCHED":
+      const searched = [
+        state.albums.filter((album) => {
+          if (action.payload == "") {
+            return album;
+          } else if (
+            album.artist
+              .toLowerCase()
+              .includes(action.payload.toLocaleLowerCase())
+          ) {
+            return album;
+          }
+        }),
+      ];
+      console.log(searched);
+      return {
+        ...state,
+        searchResult: searched,
       };
     default:
       break;

@@ -149,7 +149,7 @@ export const Albums = [
     title: "Rubber Soul",
     releaseYear: "1965",
     genre: "Rock",
-    price: "21.98",
+    price: 21.98,
   },
   {
     id: 20,

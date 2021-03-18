@@ -42,7 +42,7 @@ const Contacts = () => {
   };
 
   return (
-    <Jumbotron>
+    <Jumbotron className="mb-0" style={{ background: "#ff7700" }}>
       <div className="contacts">
         <div className="text-center">
           <h1>Contact Us!</h1>
@@ -144,15 +144,15 @@ const Contacts = () => {
                 <span className="error-message">
                   {errors.description && errors.description.message}
                 </span>
-                <button className="btn-main-offer contact-btn" type="submit">
+                {/* <button className="btn-main-offer contact-btn" type="submit">
                   Contact Us
-                </button>
+                </button> */}
               </div>
               <span className="error-message">
                 {errors.description && errors.description.message}
               </span>
               <button
-                className="btn-main-offer ml-5 mt-5 contact-btn"
+                className="btn-main-offer ml-5 mt-5 contact-btn btn-dark"
                 type="submit"
               >
                 Contact Us

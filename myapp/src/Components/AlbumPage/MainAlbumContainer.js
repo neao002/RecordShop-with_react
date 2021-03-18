@@ -15,9 +15,8 @@ function MainAlbumContainer() {
             //! when we put all container in link,the button(add to chart) gets disabled,we need to find a solution for it
             //! i kept inside div for now
             // <Link to="/album" style={{ width: "32%", height: "260px" }}>
-            <div style={{ width: "32%", height: "260px" }}>
+            <div key={album.id} style={{ width: "32%", height: "260px" }}>
               <ThumbNail
-                key={album.id}
                 id={album.id}
                 title={album.title}
                 artist={album.artist}

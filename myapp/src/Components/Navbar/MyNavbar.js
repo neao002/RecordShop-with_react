@@ -1,10 +1,18 @@
-import React, { useContext } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import UserContext from "../../ContextFolder/Context";
 
 function MyNavbar() {
   const context = useContext(UserContext);
+  const [changeKeyWord, setChangeKeyWord] = useState("");
+  const [keyWord, setKeyWord] = useState("");
+  const sendResult = (dispatch) => {
+    dispatch({
+      type: "SEARCHED",
+      payload: changeKeyWord,
+    });
+  };
   return (
     <>
       <Navbar collapseOnSelect expand="lg" variant="dark">
@@ -24,6 +32,29 @@ function MyNavbar() {
             VINILO
           </h1>
         </Navbar.Brand>
+        <div>
+          <input
+            type="text"
+            className="text-dark font-weight-bolder text-center"
+            placeholder="What can i bring?"
+            value={changeKeyWord}
+            onChange={(e) => {
+              setChangeKeyWord(e.target.value);
+            }}
+          ></input>
+          <NavLink to="/searchresult">
+            <button
+              className="btn-dark font-weight-bolder"
+              onClick={() => {
+                //!dispatch
+                sendResult(context.myDispatch);
+                setChangeKeyWord("");
+              }}
+            >
+              SEARCH
+            </button>
+          </NavLink>
+        </div>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav
