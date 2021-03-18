@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../../ContextFolder/Context";
+import Nirvana from "../../assets/img/picturesAlbums/nirvana.jpg";
 function ThumbnailAlbum(props) {
   const context = useContext(UserContext);
   const addToChart = (dispatch) => {
@@ -21,7 +22,7 @@ function ThumbnailAlbum(props) {
         {/* <Link to="/"> */}
         <img
           className="mb-2"
-          src="https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8eW91dHViZSUyMHRodW1ibmFpbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80"
+          src={props.image}
           style={{ width: "80%", height: "100%", borderRadius: "5px" }}
         ></img>
         {/* </Link> */}

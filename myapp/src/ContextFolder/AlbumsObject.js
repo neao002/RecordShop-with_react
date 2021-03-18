@@ -1,3 +1,14 @@
+import Nivarva from "../assets/img/picturesAlbums/nirvana.jpg";
+import Beach from "../assets/img/picturesAlbums/PetSoundsCover.jpg";
+import Marvin from "../assets/img/picturesAlbums/Marvin_Gaye.jpg";
+import Jimi from "../assets/img/picturesAlbums/Are_You_Experienced.jpg";
+import U2 from "../assets/img/picturesAlbums/thejoshua.jpg";
+import Beatles from "../assets/img/picturesAlbums/abbey_road.jpg";
+import Fleetwood from "../assets/img/picturesAlbums/Rumours.jpg";
+import Elvis from "../assets/img/picturesAlbums/the_sun_session.jpg";
+import Michael from "../assets/img/picturesAlbums/Thriller.jpg";
+import Rolling from "../assets/img/picturesAlbums/ExileMainSt.jpg";
+
 export const Albums = [
   {
     id: 1,
@@ -6,6 +17,7 @@ export const Albums = [
     releaseYear: "1991",
     genre: "Rock",
     price: 17.99,
+    image: Nivarva,
   },
   {
     id: 2,
@@ -14,6 +26,7 @@ export const Albums = [
     releaseYear: "1966",
     genre: "Rock",
     price: 37.12,
+    image: Beach,
   },
   {
     id: 3,
@@ -22,6 +35,7 @@ export const Albums = [
     releaseYear: "1971",
     genre: "Rock",
     price: 24.95,
+    image: Marvin,
   },
   {
     id: 4,
@@ -30,6 +44,7 @@ export const Albums = [
     releaseYear: "1967",
     genre: "Rock",
     price: 21.99,
+    image: Jimi,
   },
   {
     id: 5,
@@ -38,6 +53,7 @@ export const Albums = [
     releaseYear: "1987",
     genre: "Rock",
     price: 38.94,
+    image: U2,
   },
   {
     id: 6,
@@ -46,6 +62,7 @@ export const Albums = [
     releaseYear: "1969",
     genre: "Rock",
     price: 21.85,
+    image: Beatles,
   },
   {
     id: 7,
@@ -54,6 +71,7 @@ export const Albums = [
     releaseYear: "1977",
     genre: "Rock",
     price: 21.85,
+    image: Fleetwood,
   },
   {
     id: 8,
@@ -62,6 +80,7 @@ export const Albums = [
     releaseYear: "1976",
     genre: "Rock",
     price: 26.99,
+    image: Elvis,
   },
   {
     id: 9,
@@ -70,6 +89,7 @@ export const Albums = [
     releaseYear: "1982",
     genre: "Pop",
     price: 20.99,
+    image: Michael,
   },
   {
     id: 10,
@@ -78,6 +98,7 @@ export const Albums = [
     releaseYear: "1972",
     genre: "Rock",
     price: 29.99,
+    image: Rolling,
   },
   {
     id: 11,

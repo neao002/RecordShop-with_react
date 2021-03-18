@@ -53,6 +53,7 @@ function MainAlbumContainer() {
                     artist={album.artist}
                     releasedYear={album.releaseYear}
                     price={album.price}
+                    image={album.image}
                   ></ThumbNail>
                 </Link>
               </div>

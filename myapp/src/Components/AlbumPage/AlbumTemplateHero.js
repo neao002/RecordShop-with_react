@@ -1,7 +1,7 @@
 import React from "react";
 import { Jumbotron, Row, Col } from "react-bootstrap";
 const AlbumTemplateHero = (props) => {
-  const { artist, title, releaseYear, genre, price } = props.albumData;
+  const { artist, title, releaseYear, genre, price, image } = props.albumData;
   return (
     <Jumbotron>
       <Row>
@@ -12,6 +12,11 @@ const AlbumTemplateHero = (props) => {
           <p>{releaseYear}</p>
           <p>{genre}</p>
           <p>{price}</p>
+          <img
+            style={{ height: "20vh", width: "20%", margin: "0 auto" }}
+            src={image}
+            alt="album"
+          />
         </Col>
         <Col>{/* <img src='{url}' alt='' /> */}</Col>
       </Row>
