@@ -1,7 +1,7 @@
 import React, { useReducer, useEffect, createContext } from "react";
 import { Albums } from "./AlbumsObject";
 import { CarouselAlbums } from "./CarouselAlbums";
-import { Chart } from "./Chart";
+import { Chart } from "./ChartData";
 const UserContext = createContext();
 const initialState = {
   userName: "Murat",
@@ -55,11 +55,13 @@ const reducer = (state, action) => {
 export function ContextProvider(props) {
   const [recordState, dispatch] = useReducer(reducer, initialState);
   useEffect(() => {
-    setTimeout(() => {
-      dispatch({
-        type: "BRING_POPUP",
-      });
-    }, 1000);
+    if (!recordState.loggedIn) {
+      setTimeout(() => {
+        dispatch({
+          type: "BRING_POPUP",
+        });
+      }, 1000);
+    }
   }, []);
 
   return (

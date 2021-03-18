@@ -25,7 +25,6 @@ function MainAlbumContainer() {
                 price={album.price}
               ></ThumbNail>
             </div>
-
             // </Link>
           );
         })}

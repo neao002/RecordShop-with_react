@@ -5,9 +5,9 @@ import UserContext from "./ContextFolder/Context";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 //! Components
 
-import Navbar from "./Components/MyNavbar";
+import Navbar from "./Components/Navbar/MyNavbar";
 import Carousel from "./Components/Carousel/Carousel";
-import PopUp from "./Components/LoginPopup";
+import PopUp from "./Components/PopUp/LoginPopup";
 import MainAlbumContainer from "./Components/MainAlbumContainer";
 import AlbumPage from "./Components/AlbumPage/AlbumPageContainer";
 function App() {
