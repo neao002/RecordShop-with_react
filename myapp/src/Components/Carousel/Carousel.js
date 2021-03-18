@@ -16,16 +16,16 @@ function Carousell(props) {
       <Carousel
         fade
         style={{
-          height: "50vh",
+          height: "80vh",
           background: "white",
-          margin: "10px 200px",
+          margin: "10px 0",
           padding: "0 120px",
         }}
       >
         <Carousel.Item>
           <div
             className="bg-white px-5 d-flex justify-content-between align-items-center"
-            style={{ height: "50vh" }}
+            style={{ height: "80vh" }}
           >
             <div className="w-50 ">
               <h1 className="text-secondary text-center">hello 1</h1>
