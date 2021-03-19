@@ -40,7 +40,7 @@ weekends work for the ones who wants to keep working on it :
 
 4.- pietro will finish extra card pop up with information
 
-5.- stay log in
+5.- stay log in ==> Murat
 
 6.- change to programmer mode
 
