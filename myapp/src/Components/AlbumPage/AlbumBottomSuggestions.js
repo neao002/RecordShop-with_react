@@ -1,15 +1,17 @@
 import { useContext } from "react";
 import UserContext from "../../ContextFolder/Context";
-import Thumbnail from './ThumbnailAlbum.js'
+import Thumbnail from "./ThumbnailAlbum.js";
 const AlbumBottomSuggestions = (props) => {
   const genre = props.albumGenre;
   const context = useContext(UserContext);
-  const sameGenre = context.myStateData.albums.filter(album => album.genre === genre )
+  const sameGenre = context.myStateData.albums.filter(
+    (album) => album.genre === genre
+  );
   return (
     <div>
       <h1>Test</h1>
-      {sameGenre.map(album => {
-        return(
+      {sameGenre.map((album) => {
+        return (
           <Thumbnail
             key={album.id}
             id={album.id}
@@ -17,14 +19,12 @@ const AlbumBottomSuggestions = (props) => {
             artist={album.artist}
             releasedYear={album.releaseYear}
             price={album.price}
+            image={album.image}
           />
-
-        )
+        );
       })}
     </div>
   );
 };
 
 export default AlbumBottomSuggestions;
-
-

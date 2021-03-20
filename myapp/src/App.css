@@ -110,3 +110,8 @@ a:hover {
   left: 200%;
   bottom: 20%;
 }
+.thumbnailCard:hover {
+  color: #ff7700 !important;
+  font-weight: bolder;
+  transition: 0.2s;
+}

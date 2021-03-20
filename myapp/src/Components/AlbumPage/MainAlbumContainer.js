@@ -43,7 +43,10 @@ function MainAlbumContainer() {
               //! i kept inside div for now
 
               <div style={{ width: "32%", height: "460px" }}>
-                <Link to={{ pathname: "/album", state: { album: album } }}>
+                <Link
+                  className="thumbnailCard"
+                  to={{ pathname: "/album", state: { album: album } }}
+                >
                   <ThumbNail
                     key={album.id}
                     id={album.id}
@@ -51,6 +54,7 @@ function MainAlbumContainer() {
                     artist={album.artist}
                     releasedYear={album.releaseYear}
                     price={album.price}
+                    image={album.image}
                   ></ThumbNail>
                 </Link>
               </div>

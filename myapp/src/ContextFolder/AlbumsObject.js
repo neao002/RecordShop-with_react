@@ -1,3 +1,26 @@
+import Nivarva from "../assets/img/picturesAlbums/nirvana.jpg";
+import Beach from "../assets/img/picturesAlbums/PetSoundsCover.jpg";
+import Marvin from "../assets/img/picturesAlbums/Marvin_Gaye.jpg";
+import Jimi from "../assets/img/picturesAlbums/Are_You_Experienced.jpg";
+import U2 from "../assets/img/picturesAlbums/thejoshua.jpg";
+import Beatles from "../assets/img/picturesAlbums/abbey_road.jpg";
+import Fleetwood from "../assets/img/picturesAlbums/Rumours.jpg";
+import Elvis from "../assets/img/picturesAlbums/the_sun_session.jpg";
+import Michael from "../assets/img/picturesAlbums/Thriller.jpg";
+import Rolling from "../assets/img/picturesAlbums/ExileMainSt.jpg";
+
+import Springsteen from "../assets/img/picturesAlbums/born_to_run.jpg";
+import Clash from "../assets/img/picturesAlbums/london_calling.jpg";
+import Eagles from "../assets/img/picturesAlbums/hotel_california.jpg";
+import Zeppelin from "../assets/img/picturesAlbums/1969_Led_Zeppelin.jpg";
+import Zeppelins from "../assets/img/picturesAlbums/Led_Zeppelin_IV.jpg";
+import Synchronicity from "../assets/img/picturesAlbums/The_Police_Synchronicity_Photo.jpg";
+import Achtung from "../assets/img/picturesAlbums/Achtung_Baby.jpg";
+import Stones from "../assets/img/picturesAlbums/let_it _bleed.jpg";
+import Beatless from "../assets/img/picturesAlbums/rubber_soul.png";
+import Ramones from "../assets/img/picturesAlbums/the_ramones.jpg";
+import Hideout from "../assets/img/picturesAlbums/ExileMainSt.jpg";
+
 export const Albums = [
   {
     id: 1,
@@ -6,6 +29,7 @@ export const Albums = [
     releaseYear: "1991",
     genre: "Rock",
     price: 17.99,
+    image: Nivarva,
   },
   {
     id: 2,
@@ -14,6 +38,7 @@ export const Albums = [
     releaseYear: "1966",
     genre: "Rock",
     price: 37.12,
+    image: Beach,
   },
   {
     id: 3,
@@ -22,6 +47,7 @@ export const Albums = [
     releaseYear: "1971",
     genre: "Rock",
     price: 24.95,
+    image: Marvin,
   },
   {
     id: 4,
@@ -30,6 +56,7 @@ export const Albums = [
     releaseYear: "1967",
     genre: "Rock",
     price: 21.99,
+    image: Jimi,
   },
   {
     id: 5,
@@ -38,6 +65,7 @@ export const Albums = [
     releaseYear: "1987",
     genre: "Rock",
     price: 38.94,
+    image: U2,
   },
   {
     id: 6,
@@ -46,6 +74,7 @@ export const Albums = [
     releaseYear: "1969",
     genre: "Rock",
     price: 21.85,
+    image: Beatles,
   },
   {
     id: 7,
@@ -54,6 +83,7 @@ export const Albums = [
     releaseYear: "1977",
     genre: "Rock",
     price: 21.85,
+    image: Fleetwood,
   },
   {
     id: 8,
@@ -62,6 +92,7 @@ export const Albums = [
     releaseYear: "1976",
     genre: "Rock",
     price: 26.99,
+    image: Elvis,
   },
   {
     id: 9,
@@ -70,6 +101,7 @@ export const Albums = [
     releaseYear: "1982",
     genre: "Pop",
     price: 20.99,
+    image: Michael,
   },
   {
     id: 10,
@@ -78,6 +110,7 @@ export const Albums = [
     releaseYear: "1972",
     genre: "Rock",
     price: 29.99,
+    image: Rolling,
   },
   {
     id: 11,
@@ -86,6 +119,7 @@ export const Albums = [
     releaseYear: "1975",
     genre: "Rock",
     price: 17.99,
+    image: Springsteen,
   },
   {
     id: 12,
@@ -94,6 +128,7 @@ export const Albums = [
     releaseYear: "1980",
     genre: "Rock",
     price: 21.99,
+    image: Clash,
   },
   {
     id: 13,
@@ -101,7 +136,7 @@ export const Albums = [
     title: "Hotel California",
     releaseYear: "1976",
     genre: "Rock",
-    price: 16.99,
+    image: Eagles,
   },
   {
     id: 14,
@@ -109,7 +144,7 @@ export const Albums = [
     title: "Led Zeppelin",
     releaseYear: "1969",
     genre: "Rock",
-    price: 23.99,
+    image: Zeppelin,
   },
   {
     id: 15,
@@ -117,7 +152,7 @@ export const Albums = [
     title: "IV",
     releaseYear: "1971",
     genre: "Rock",
-    price: 13.99,
+    image: Zeppelins,
   },
   {
     id: 16,
@@ -125,7 +160,7 @@ export const Albums = [
     title: "Synchronicity",
     releaseYear: "1983",
     genre: "Rock",
-    price: 18.99,
+    image: Synchronicity,
   },
   {
     id: 17,
@@ -133,7 +168,7 @@ export const Albums = [
     title: "Achtung Baby",
     releaseYear: "1991",
     genre: "Rock",
-    price: 15.99,
+    image: Achtung,
   },
   {
     id: 18,
@@ -141,7 +176,7 @@ export const Albums = [
     title: "Let it Bleed",
     releaseYear: "1969",
     genre: "Rock",
-    price: "21.97",
+    image: Stones,
   },
   {
     id: 19,
@@ -149,7 +184,7 @@ export const Albums = [
     title: "Rubber Soul",
     releaseYear: "1965",
     genre: "Rock",
-    price: 21.98,
+    image: Beatless,
   },
   {
     id: 20,
@@ -157,7 +192,7 @@ export const Albums = [
     title: "The Ramones",
     releaseYear: "1976",
     genre: "Rock",
-    price: 17.99,
+    image: Ramones,
   },
   {
     id: 21,
@@ -165,6 +200,6 @@ export const Albums = [
     title: "Hideout EP",
     releaseYear: "2017",
     genre: "Electro-Pop",
-    price: 23.5,
+    image: Hideout,
   },
 ];
