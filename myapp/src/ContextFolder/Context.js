@@ -52,7 +52,14 @@ const reducer = (state, action) => {
   }
 };
 export function ContextProvider(props) {
-  const [recordState, dispatch] = useReducer(reducer, initialState);
+  const [recordState, dispatch] = useReducer(reducer, initialState, () => {
+    const localData = localStorage.getItem("updatedRecordState");
+    return localData ? JSON.parse(localData) : initialState;
+  });
+  useEffect(() => {
+    localStorage.setItem("updatedRecordState", JSON.stringify(recordState));
+  }, [recordState]);
+
   useEffect(() => {
     if (!recordState.loggedIn) {
       setTimeout(() => {

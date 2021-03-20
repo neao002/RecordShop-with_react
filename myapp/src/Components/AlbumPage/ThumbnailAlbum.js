@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../../ContextFolder/Context";
-import Nirvana from "../../assets/img/picturesAlbums/nirvana.jpg";
+
 function ThumbnailAlbum(props) {
   const context = useContext(UserContext);
   const addToChart = (dispatch) => {
@@ -12,7 +12,7 @@ function ThumbnailAlbum(props) {
   };
   return (
     <div
-      className="px-1 pt-3 mx-auto d-flex flex-column justify-content-center align-items-center mb-5"
+      className=" px-1 pt-3 mx-auto d-flex flex-column justify-content-center align-items-center"
       style={{ borderRadius: "15px" }}
     >
       <div
@@ -23,12 +23,11 @@ function ThumbnailAlbum(props) {
         <img
           className="mb-2"
           src={props.image}
-          style={{ width: "80%", height: "100%", borderRadius: "5px" }}
+          style={{ width: "70%", height: "100%", borderRadius: "5px" }}
         ></img>
         {/* </Link> */}
       </div>
       <div
-        // className="d-flex justify-content-between flex-column my-auto px-1"
         className="d-flex justify-content-between align-items-center flex-column  px-1"
         style={{ height: "150px" }}
       >
