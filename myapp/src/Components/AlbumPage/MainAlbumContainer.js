@@ -37,6 +37,7 @@ function MainAlbumContainer() {
             }
           })
           .map((album) => {
+            console.log(album, 'here')
             return (
               //! when we put all container in link,the button(add to chart) gets disabled,we need to find a solution for it
               //! i kept inside div for now

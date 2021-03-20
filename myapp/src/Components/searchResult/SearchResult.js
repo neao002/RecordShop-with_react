@@ -2,7 +2,7 @@ import { useContext } from "react";
 import UserContext from "../../ContextFolder/Context";
 import ThumbnailAlbum from "../AlbumPage/ThumbnailAlbum";
 import { Link } from "react-router-dom";
-function searchResult() {
+function SearchResult() {
   const context = useContext(UserContext);
   console.log(context.myStateData.searchResult);
   return (
@@ -28,4 +28,4 @@ function searchResult() {
   );
 }
 
-export default searchResult;
+export default SearchResult;

@@ -2,9 +2,10 @@ import React from "react";
 import Hero from "./AlbumTemplateHero";
 import Suggestions from "./AlbumBottomSuggestions";
 import { useLocation } from "react-router-dom";
+
 const AlbumPageContainer = () => {
   let location = useLocation();
-  console.log(location.state);
+  console.log(location);
   const { genre } = location.state.album;
   return (
     <div>
