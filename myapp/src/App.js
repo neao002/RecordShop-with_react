@@ -14,6 +14,7 @@ import AlbumPage from "./Components/AlbumPage/AlbumPageContainer";
 // contact, do not forget to add ur packages, you can find them in description!
 import Contacts from "./Components/ContactForm/Contacts";
 import Footer from "./Components/Footer/Footer";
+import Payment from "./Components/Payment/Payment";
 
 function App() {
   const context = useContext(UserContext);
@@ -41,9 +42,8 @@ function App() {
             //? trying
             path="/payment"
             exact
-            component
           >
-            {/* Ahmad works on it */}
+            {/* example payment page in component,real one by Ahmad */}
             {/* <Payment></Payment> */}
           </Route>
         </Switch>

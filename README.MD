@@ -32,22 +32,20 @@ footer: //npm install react-share --save this one is for socialmedia icons
 
 weekends work for the ones who wants to keep working on it :
 
-1.- style of website
+- style of website
 
-2.- links from navbar see what we could do with them
+- links from navbar see what we could do with them
 
-3.- api photos in the cards
+- api photos in the cards
 
-4.- pietro will finish extra card pop up with information
+- pietro will finish extra card pop up with information
 
-5.- stay log in ==> Murat
+- change to programmer mode
 
-6.- change to programmer mode
+- api spotify check this out : https://developer.spotify.com/documentation/web-api/
 
-7.- api spotify check this out : https://developer.spotify.com/documentation/web-api/
+- items and information from car
 
-8.- items and information from car
+- search bar another posibilities
 
-9.- search bar another posibilities
-
-10.- deploy app
+- deploy app

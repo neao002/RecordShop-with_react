@@ -7,7 +7,7 @@ function MainAlbumContainer() {
   const [searchTerm, setSearchTerm] = useState("");
   const context = useContext(UserContext);
   return (
-    <div className="mx-auto" style={{ width: "80%" }}>
+    <div className="mx-auto mb-5" style={{ width: "80%" }}>
       <h1
         className=" bg-dark mx-auto py-2 px-4 mb-4"
         style={{ color: "#ff7700" }}
@@ -23,7 +23,7 @@ function MainAlbumContainer() {
         />
       </h1>
 
-      <div className="d-flex flex-wrap justify-content-start">
+      <div className="d-flex flex-wrap justify-content-center">
         {context.myStateData.albums
           .filter((values) => {
             if (searchTerm == "") {
@@ -37,14 +37,14 @@ function MainAlbumContainer() {
             }
           })
           .map((album) => {
-            console.log(album, 'here')
+            // console.log(album, "here");
             return (
-              //! when we put all container in link,the button(add to chart) gets disabled,we need to find a solution for it
-              //! i kept inside div for now
-
-              <div style={{ width: "32%", height: "460px" }}>
+              <div
+                className="thumbNailCard mb-3"
+                style={{ width: "32%", height: "460px" }}
+              >
                 <Link
-                  className="thumbnailCard"
+                  className="thumbnailText"
                   to={{ pathname: "/album", state: { album: album } }}
                 >
                   <ThumbNail

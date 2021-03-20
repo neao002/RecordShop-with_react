@@ -31,16 +31,38 @@ const reducer = (state, action) => {
         ...state,
         popUp: false,
       };
-    case "ADD_CHART":
-      const addIndex = state.albums.findIndex((album) => {
+    //! remove handler has to be fixed
+    case "REMOVE_FROM_CHART":
+      let newChart = state.chart;
+      newChart.splice(action.payload, 1);
+      // console.log(action.payload);
+      // console.log(newChart);
+      // console.log(state.chart);
+      return {
+        ...state,
+        chart: newChart,
+      };
+    case "ADD_CHART_THUMB":
+      const addAlbumIndex = state.albums.findIndex((album) => {
         return album.id == action.payload;
       });
       if (state.loggedIn) {
         return {
           ...state,
-          chart: [...state.chart, state.albums[addIndex]],
+          chart: [...state.chart, state.albums[addAlbumIndex]],
         };
       }
+    case "ADD_CHART_CAROUSEL":
+      const addCarouselIndex = state.carouselAlbums.findIndex((album) => {
+        return album.id == action.payload;
+      });
+      if (state.loggedIn) {
+        return {
+          ...state,
+          chart: [...state.chart, state.carouselAlbums[addCarouselIndex]],
+        };
+      }
+
     case "LOGOUT":
       return {
         ...state,
@@ -52,7 +74,14 @@ const reducer = (state, action) => {
   }
 };
 export function ContextProvider(props) {
-  const [recordState, dispatch] = useReducer(reducer, initialState);
+  const [recordState, dispatch] = useReducer(reducer, initialState, () => {
+    const localData = localStorage.getItem("updatedRecordState");
+    return localData ? JSON.parse(localData) : initialState;
+  });
+  useEffect(() => {
+    localStorage.setItem("updatedRecordState", JSON.stringify(recordState));
+  }, [recordState]);
+
   useEffect(() => {
     if (!recordState.loggedIn) {
       setTimeout(() => {
