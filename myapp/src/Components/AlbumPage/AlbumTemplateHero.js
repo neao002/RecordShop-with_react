@@ -1,26 +1,36 @@
 import React from "react";
-import { Jumbotron, Row, Col } from "react-bootstrap";
+import {  Row, Col } from "react-bootstrap";
 const AlbumTemplateHero = (props) => {
   const { artist, title, releaseYear, genre, price, image } = props.albumData;
   return (
-    <Jumbotron>
-      <Row>
-        <Col></Col>
-        <Col>
-          <h2>{title}</h2>
-          <p>{artist}</p>
-          <p>{releaseYear}</p>
-          <p>{genre}</p>
-          <p>{price}</p>
-          <img
-            style={{ height: "20vh", width: "20%", margin: "0 auto" }}
+  
+      <Row className='m-3' style={{lineHeight:'1'}}>
+        <Col className='d-flex flex-align-items-center justify-content-center'>
+        <div >
+          <h1>{title}</h1>
+          <p>{artist}, {releaseYear} {genre}</p>
+     
+          <p>Price: {price}</p>
+          <ul>
+            <li>TRACK</li>
+            <li>TRACK</li>
+            <li>TRACK</li>
+            <li>TRACK</li>
+            <li>TRACK</li>
+            <li>TRACK</li>
+            <li>TRACK</li>
+          </ul>
+
+        </div>
+          
+        </Col>
+        <Col><img
+            style={{ height: "60vh", width: "90%", }}
             src={image}
             alt="album"
-          />
-        </Col>
-        <Col>{/* <img src='{url}' alt='' /> */}</Col>
+          /></Col>
       </Row>
-    </Jumbotron>
+   
   );
 };
 

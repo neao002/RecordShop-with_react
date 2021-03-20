@@ -5,12 +5,11 @@ import { useLocation } from "react-router-dom";
 
 const AlbumPageContainer = () => {
   let location = useLocation();
-  console.log(location);
   const { genre } = location.state.album;
   return (
     <div>
-      <Hero albumData={location.state.album}/>
-      <Suggestions albumGenre={genre}/>
+      <Hero albumData={location.state.album} style={{height:'60vh'}}/>
+      <Suggestions albumGenre={genre} style={{height:'20vh'}}/>
     
     </div>
   );

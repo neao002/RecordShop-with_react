@@ -1,18 +1,26 @@
-import { useContext } from "react";
+import { useContext} from "react";
 import UserContext from "../../ContextFolder/Context";
-import Thumbnail from "./ThumbnailAlbum.js";
+import SuggestionCard from './AlbumBottomSuggestionCard'
 const AlbumBottomSuggestions = (props) => {
   const genre = props.albumGenre;
   const context = useContext(UserContext);
   const sameGenre = context.myStateData.albums.filter(
     (album) => album.genre === genre
   );
+  const Random = Math.floor(Math.random()*sameGenre.length)
+  const selection = sameGenre.slice(Random,Random+4)
+
+
+
+
   return (
-    <div>
-      <h1>Test</h1>
-      {sameGenre.map((album) => {
+    <div className='d-flex mb-5 flex-wrap justify-content-around' >
+     
+      {selection.map((album) => {
+      
         return (
-          <Thumbnail
+          
+          <SuggestionCard
             key={album.id}
             id={album.id}
             title={album.title}
