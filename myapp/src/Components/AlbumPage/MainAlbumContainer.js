@@ -37,7 +37,7 @@ function MainAlbumContainer() {
             }
           })
           .map((album) => {
-            console.log(album, "here");
+            // console.log(album, "here");
             return (
               <div
                 className="thumbNailCard mb-3"

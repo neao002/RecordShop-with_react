@@ -10,6 +10,7 @@ export const CarouselAlbums = [
     artist: "Red Hot Chili Peppers",
     price: 35.9,
     image: Californication,
+    genre: "Alternative Rock",
   },
   {
     id: 2,
@@ -17,6 +18,7 @@ export const CarouselAlbums = [
     artist: "Coldplay",
     price: 27.25,
     image: EverydayLife,
+    genre: "Alternative",
   },
   {
     id: 3,
@@ -24,6 +26,7 @@ export const CarouselAlbums = [
     artist: "Metallica",
     price: 42.5,
     image: MasterOfPuppets,
+    genre: "Rock",
   },
   {
     id: 4,
@@ -31,5 +34,6 @@ export const CarouselAlbums = [
     artist: "The Beatles",
     price: 54.99,
     image: AbbeyRoad,
+    genre: "Pop",
   },
 ];

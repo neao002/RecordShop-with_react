@@ -6,7 +6,7 @@ function ThumbnailAlbum(props) {
   const context = useContext(UserContext);
   const addToChart = (dispatch) => {
     dispatch({
-      type: "ADD_CHART",
+      type: "ADD_CHART_THUMB",
       payload: props.id,
     });
   };
