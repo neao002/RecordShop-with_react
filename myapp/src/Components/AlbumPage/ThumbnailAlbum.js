@@ -20,7 +20,7 @@ function ThumbnailAlbum(props) {
   };
   return (
     <div
-      className=" px-1 pt-3 mx-auto d-flex flex-column justify-content-center align-items-center"
+      className="  px-1 pt-3 mx-auto d-flex flex-column justify-content-center align-items-center"
       style={{ borderRadius: "15px" }}
     >
       <div

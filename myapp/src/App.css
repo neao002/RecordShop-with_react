@@ -1,3 +1,9 @@
+/* app main container */
+
+.App {
+  background-color: rgb(255, 254, 254);
+}
+
 .modal-dialog {
   margin-top: 10% !important;
 }
@@ -22,9 +28,12 @@ a {
   color: black !important;
 }
 
+/* background cards */
+
 .myCarousel {
-  background: beige;
+  background: rgba(255, 255, 255, 0.966);
 }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100px;
@@ -131,9 +140,22 @@ a:hover {
 }
 
 form .btnSearchLatest {
-  width: auto;
-  display: flex;
-  position: absolute;
-  left: 25%;
-  bottom: 11.5%;
+}
+
+.dark-mode {
+  background-color: #1a1919;
+  color: #999;
+  height: 100%;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.light-mode {
+  background-color: #fff;
+  color: #333;
+  height: 100%;
+  transition: background-color 0.25s ease-in-out;
+}
+
+.faSun {
+  background-color: yellow !important;
 }

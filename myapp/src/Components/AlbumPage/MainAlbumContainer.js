@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
 import ThumbNail from "./ThumbnailAlbum";
 import UserContext from "../../ContextFolder/Context";
+
 import { Link } from "react-router-dom";
 
-import { Form, FormControl, Button } from "react-bootstrap";
+import { Form, FormControl } from "react-bootstrap";
+
 function MainAlbumContainer() {
   const [searchTerm, setSearchTerm] = useState("");
   const context = useContext(UserContext);
@@ -26,7 +28,7 @@ function MainAlbumContainer() {
         </Form>
       </h1>
 
-      <div className="d-flex flex-wrap justify-content-center">
+      <div className="myCarousel d-flex flex-wrap justify-content-center">
         {context.myStateData.albums
           .filter((values) => {
             if (searchTerm == "") {

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
@@ -16,26 +16,52 @@ import Contacts from "./Components/ContactForm/Contacts";
 import Footer from "./Components/Footer/Footer";
 import Payment from "./Components/Payment/Payment";
 
+//Dark mode
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faCoffee,
+  faDesktop,
+  faShoppingCart,
+  faAdjust,
+  faMoon,
+  faSun,
+} from "@fortawesome/free-solid-svg-icons";
+
 function App() {
   const context = useContext(UserContext);
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <Router>
-      <div className="App">
-        <Navbar></Navbar>
+      <div className={darkMode ? "dark-mode" : "light-mode"}>
+        <Navbar />
+        <div className="switch-checkbox">
+          <FontAwesomeIcon
+            className=" mt-3 highlight logocart mr-2 icon"
+            icon={faMoon}
+            size="1x"
+          />
+          <p>Programmer Mode</p>
+          <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+        </div>
+        <FontAwesomeIcon
+          className=" faSun mt-3 highlight logocart mr-2 icon"
+          icon={faSun}
+          size="1x"
+        />
+
         <Switch>
           <Route path="/" exact>
-            <Carousel></Carousel>
+            <Carousel />
             {context.myStateData.popUp ? <PopUp></PopUp> : null}
-            <MainAlbumContainer></MainAlbumContainer>
+            <MainAlbumContainer />
           </Route>
 
           <Route
             //? trying
             path="/bestsellers"
             exact
-            component={() => {
-              return <h1>bestseller</h1>;
-            }}
           ></Route>
           <Route path="/album" component={AlbumPage} />
           <Route

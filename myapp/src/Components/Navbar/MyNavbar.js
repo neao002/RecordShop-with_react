@@ -1,10 +1,23 @@
 import { useContext, useState } from "react";
-import { NavLink } from "react-router-dom";
-import { Navbar, Nav, NavDropdown, Menu } from "react-bootstrap";
+import { NavLink, Switch } from "react-router-dom";
+import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import UserContext from "../../ContextFolder/Context";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faCoffee,
+  faDesktop,
+  faShoppingCart,
+  faAdjust,
+  faMoon,
+  faSun,
+} from "@fortawesome/free-solid-svg-icons";
 
 function MyNavbar() {
   const context = useContext(UserContext);
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <>
       <Navbar collapseOnSelect expand="lg" variant="dark">
