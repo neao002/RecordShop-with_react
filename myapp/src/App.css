@@ -13,13 +13,17 @@ input {
   border-radius: 5px;
 }
 nav {
-  background-color: #ff7700 !important;
+  background-color: #ee750b !important;
   height: 75px !important;
   box-shadow: 0 5px 5px grey !important;
 }
 
 a {
   color: black !important;
+}
+
+.myCarousel {
+  background: beige;
 }
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -124,4 +128,12 @@ a:hover {
 
 .logocart {
   color: white;
+}
+
+form .btnSearchLatest {
+  width: auto;
+  display: flex;
+  position: absolute;
+  left: 25%;
+  bottom: 11.5%;
 }

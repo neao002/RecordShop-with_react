@@ -36,7 +36,7 @@ function ThumbnailAlbum(props) {
         {/* </Link> */}
       </div>
       <div
-        className="d-flex justify-content-between align-items-center flex-column  px-1"
+        className=" d-flex justify-content-between align-items-center flex-column  px-1"
         style={{ height: "150px" }}
       >
         <p className="text-secondary">{props.releasedYear}</p>
@@ -46,7 +46,7 @@ function ThumbnailAlbum(props) {
 
           <p>Price:{props.price} €</p>
           <button
-            className="btn-primary h-25"
+            className=" btn-primary h-25"
             style={{ width: "130px" }}
             onClick={() => {
               addToChart(context.myDispatch);

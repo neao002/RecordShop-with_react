@@ -3,6 +3,7 @@ import ThumbNail from "./ThumbnailAlbum";
 import UserContext from "../../ContextFolder/Context";
 import { Link } from "react-router-dom";
 
+import { Form, FormControl, Button } from "react-bootstrap";
 function MainAlbumContainer() {
   const [searchTerm, setSearchTerm] = useState("");
   const context = useContext(UserContext);
@@ -12,15 +13,17 @@ function MainAlbumContainer() {
         className=" bg-dark mx-auto py-2 px-4 mb-4"
         style={{ color: "#ff7700" }}
       >
-        Latest
-        <input
-          className="ml-5"
-          type="text"
-          placeholder="Search your Fav Music"
-          onChange={(event) => {
-            setSearchTerm(event.target.value);
-          }}
-        />
+        Latest Music :
+        <Form inline>
+          <FormControl
+            className=" btnSearchLatest mx-5 mt-2"
+            type="text"
+            placeholder="Search..."
+            onChange={(event) => {
+              setSearchTerm(event.target.value);
+            }}
+          />
+        </Form>
       </h1>
 
       <div className="d-flex flex-wrap justify-content-center">
