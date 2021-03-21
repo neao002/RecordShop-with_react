@@ -1,6 +1,16 @@
 import { useContext } from "react";
 import UserContext from "../../ContextFolder/Context";
 
+//fontawesome components from react fontawesome
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faCoffee,
+  faDesktop,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons";
+
 function CarouselItem(props) {
   const context = useContext(UserContext);
   const addToChart = (dispatch) => {
@@ -11,7 +21,7 @@ function CarouselItem(props) {
   };
   return (
     <div
-      className="bg-white  mr-5  d-flex justify-content-between align-items-center"
+      className="Jumbotrom Fluid bg-white mr-5  d-flex justify-content-between align-items-center"
       style={{ height: "70vh" }}
     >
       <div className="w-50 d-flex flex-column align align-items-center">
@@ -22,12 +32,17 @@ function CarouselItem(props) {
         </div>
 
         <button
-          className="carouselButton w-50 mx-5 mt-5"
+          className="carouselButton w-3 0 mx-5 mt-5"
           onClick={() => {
             addToChart(context.myDispatch);
           }}
         >
-          Add to Chart
+          <FontAwesomeIcon
+            className=" highlight logocart mr-3 icon"
+            icon={faShoppingCart}
+            size="1x"
+          />
+          Add to Cart
         </button>
       </div>
       <img

@@ -49,3 +49,11 @@ weekends work for the ones who wants to keep working on it :
 - search bar another posibilities
 
 - deploy app
+
+fontawesome icons react :
+
+https://fontawesome.com/how-to-use/on-the-web/using-with/react
+
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome

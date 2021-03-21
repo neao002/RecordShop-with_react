@@ -2,6 +2,14 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../../ContextFolder/Context";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faCoffee,
+  faDesktop,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons";
+
 function ThumbnailAlbum(props) {
   const context = useContext(UserContext);
   const addToChart = (dispatch) => {
@@ -44,7 +52,12 @@ function ThumbnailAlbum(props) {
               addToChart(context.myDispatch);
             }}
           >
-            Add to the chart
+            <FontAwesomeIcon
+              className=" highlight logocart mr-2 icon"
+              icon={faShoppingCart}
+              size="md"
+            />
+            Add to Cart
           </button>
           <p className="text-secondary">{props.genre}</p>
         </div>

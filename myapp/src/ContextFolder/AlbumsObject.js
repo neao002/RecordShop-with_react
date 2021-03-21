@@ -25,7 +25,7 @@ export const Albums = [
   {
     id: 1,
     artist: "Nirvana",
-    title: "Never mind",
+    title: "Never Mind",
     releaseYear: "1991",
     genre: "Rock",
     price: 17.99,
