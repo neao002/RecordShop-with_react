@@ -43,7 +43,7 @@ const Contacts = () => {
 
   return (
     <Jumbotron>
-      <div className="bg-primary">
+      <div className="bg-success">
         <div className="text-center">
           <h1>Subscribe to our News!</h1>
           <p>Please fill out the form!</p>

@@ -4,10 +4,6 @@
 
 ## Contains:React,Router,Bootstrap,Context API
 
-# Ideas to implement
-
-1-
-
 ## Must be packages
 
 ### npm i emailjs-com
@@ -20,6 +16,14 @@
 
 ### npm install react-share --save
 
+### npm i --save @fortawesome/fontawesome-svg-core
+
+### npm install --save @fortawesome/free-solid-svg-icons
+
+### npm install --save @fortawesome/react-fontawesome
+
+\*//////////////////****\*\*****\*\*****\*\*****\*\*\*****\*\*****\*\*****\*\*****
+
 contact form :
 
 npm install emailjs-com you have to install this package on ur pc
@@ -29,6 +33,18 @@ also, npm install react-hook-form also this one
 import { useForm } from "react-hook-form";
 
 footer: //npm install react-share --save this one is for socialmedia icons
+
+\*//////////////////****\*\*****\*\*****\*\*****\*\*\*****\*\*****\*\*****\*\*****
+
+fontawesome icons react :
+
+https://fontawesome.com/how-to-use/on-the-web/using-with/react
+
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+
+# Ideas to implement
 
 weekends work for the ones who wants to keep working on it :
 
@@ -49,11 +65,3 @@ weekends work for the ones who wants to keep working on it :
 - search bar another posibilities
 
 - deploy app
-
-fontawesome icons react :
-
-https://fontawesome.com/how-to-use/on-the-web/using-with/react
-
-npm i --save @fortawesome/fontawesome-svg-core
-npm install --save @fortawesome/free-solid-svg-icons
-npm install --save @fortawesome/react-fontawesome

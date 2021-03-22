@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
@@ -18,24 +18,29 @@ import Payment from "./Components/Payment/Payment";
 
 function App() {
   const context = useContext(UserContext);
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <Router>
-      <div className="App">
-        <Navbar></Navbar>
+      <div className={darkMode ? "dark-mode" : "light-mode"}>
+        <Navbar />
+        <div className=" switch-checkbox">
+          <button type="submit" class="btn btn-light">
+            <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+            Light-Dark
+          </button>
+        </div>
+
         <Switch>
           <Route path="/" exact>
-            <Carousel></Carousel>
+            <Carousel />
             {context.myStateData.popUp ? <PopUp></PopUp> : null}
-            <MainAlbumContainer></MainAlbumContainer>
+            <MainAlbumContainer />
           </Route>
 
           <Route
             //? trying
             path="/bestsellers"
             exact
-            component={() => {
-              return <h1>bestseller</h1>;
-            }}
           ></Route>
           <Route path="/album" component={AlbumPage} />
           <Route

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Row, Col } from 'react-bootstrap'
+import React from "react";
+import { Row, Col } from "react-bootstrap";
 const AlbumBottomSuggestionCard = ({ title, artist, price, image }) => {
     const cardStyle = {
         width: '24vw',
@@ -30,8 +30,12 @@ const AlbumBottomSuggestionCard = ({ title, artist, price, image }) => {
         
 
 
-        </div>
-    )
-}
+       
+     
 
-export default AlbumBottomSuggestionCard
+      <img src={image} alt="album pic" width="200px" height="200px"></img>
+    </div>
+  );
+};
+
+export default AlbumBottomSuggestionCard;

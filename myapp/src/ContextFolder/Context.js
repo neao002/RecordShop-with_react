@@ -1,8 +1,11 @@
 import React, { useReducer, useEffect, createContext } from "react";
+import { withRouter } from "react-router";
 import { Albums } from "./AlbumsObject";
 import { CarouselAlbums } from "./CarouselAlbums";
 import { Chart } from "./ChartData";
+
 const UserContext = createContext();
+
 const initialState = {
   userName: "Murat",
   loggedIn: false,
@@ -69,6 +72,7 @@ const reducer = (state, action) => {
         chart: [],
         loggedIn: false,
       };
+
     default:
       break;
   }
