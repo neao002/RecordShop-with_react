@@ -33,7 +33,7 @@ const AlbumBottomSuggestionCard = ({ title, artist, price, image }) => {
        
      
 
-      <img src={image} alt="album pic" width="200px" height="200px"></img>
+      
     </div>
   );
 };
