@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import UserContext from "../../ContextFolder/Context";
 
-function chartItems(props) {
+function ChartItems(props) {
   const context = useContext(UserContext);
   // console.log(context.myStateData.chart);
   const removeHandler = (dispatch) => {
@@ -38,4 +38,4 @@ function chartItems(props) {
   );
 }
 
-export default chartItems;
+export default ChartItems;

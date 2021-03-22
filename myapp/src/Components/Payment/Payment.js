@@ -21,7 +21,7 @@ function Payment() {
       >
         <div>
           {context.myStateData.chart.length == 0 ? null : (
-            <h1>Items:{context.myStateData.chart.length}</h1>
+            <h1>Items : {context.myStateData.chart.length}</h1>
           )}
           {context.myStateData.chart.map((item, index) => {
             totalPrice = totalPrice + item.price;
@@ -39,7 +39,7 @@ function Payment() {
           })}
         </div>
         {context.myStateData.chart.length == 0 ? (
-          <h1 className="mx-auto my-auto" style={{ height: "20vh" }}>
+          <h1 className="mx-auto my-auto" style={{ height: "50vh" }}>
             Your box is empty
           </h1>
         ) : (
@@ -49,13 +49,13 @@ function Payment() {
           >
             <h1 className="mb-3">Summary</h1>
             <div className=" d-flex justify-content-between align-items-center">
-              <h4>Subtotal:</h4>
+              <h4>Subtotal :</h4>
               <h3>{totalPrice.toFixed(2)} €</h3>
             </div>
             <div className=" d-flex justify-content-between align-items-center">
               <div>
-                <h4>Delivery:</h4>
-                <p>Delivery is free from 30€</p>
+                <h4 className="mt-4">Delivery :</h4>
+                <p>Delivery is free up to 30€</p>
               </div>
 
               <h3>{delivery.toFixed(2)} €</h3>
