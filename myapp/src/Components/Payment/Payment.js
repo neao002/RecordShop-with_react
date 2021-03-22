@@ -4,11 +4,11 @@ import ChartItem from "./chartItem";
 import { Link } from "react-router-dom";
 function Payment() {
   const context = useContext(UserContext);
-  let totalPrice = 0;
+  let totalPrice;
   let delivery = 0;
   if (totalPrice > 30) {
     delivery = 0;
-  } else if (totalPrice < 1) {
+  } else if ((totalPrice = 0)) {
     delivery = 0;
   } else {
     delivery = 4.99;
