@@ -50,7 +50,7 @@ const reducer = (state, action) => {
         return album.id == action.payload;
       });
       let addAlbumItem = state.albums[addAlbumIndex];
-      console.log(state.chart);
+
       if (state.loggedIn) {
         return {
           ...state,
@@ -63,7 +63,6 @@ const reducer = (state, action) => {
       });
 
       let addAlbumItemCarousel = state.carouselAlbums[addCarouselIndex];
-      console.log(state.chart);
       if (state.loggedIn) {
         return {
           ...state,
