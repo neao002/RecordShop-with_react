@@ -66,21 +66,21 @@ function Payment() {
         })}
       </div>
       <div
-        className="bg-dark text-white py-3 pr-4 pl-3 ml-3 mr-5"
-        style={{ height: "500px", width: "55%", marginTop: "55px" }}
+        className="checkout bg-dark text-white py-3 pr-4 pl-3 ml-5 mr-5"
+        style={{ height: "490px", width: "55%", marginTop: "55px" }}
       >
         <h1 className="mb-3">Summary</h1>
         <div className=" d-flex justify-content-between align-items-center">
           <h4>Subtotal:</h4>
-          <h3>{totalPrice}</h3>
+          <h3>{totalPrice.toFixed(2)} €</h3>
         </div>
         <div className=" d-flex justify-content-between align-items-center">
           <h4>Delivery:</h4>
-          <h3>{delivery}</h3>
+          <h3>{delivery.toFixed(2)} €</h3>
         </div>
         <div className="mt-5 d-flex justify-content-between align-items-center">
           <h1>Total:</h1>
-          <h3>{totalPrice + delivery} €</h3>
+          <h3>{(totalPrice + delivery).toFixed(2)} €</h3>
         </div>
         <div className="d-flex justify-content-between mx-auto flex-column mt-3 h-25 w-100 px-4">
           <button
