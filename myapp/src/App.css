@@ -160,3 +160,7 @@ a:hover {
 .faMoon {
   background-color: blueviolet;
 }
+.checkout {
+  position: sticky;
+  top: 40px;
+}

@@ -66,7 +66,7 @@ function App() {
             exact
           >
             {/* example payment page in component,real one by Ahmad */}
-            <Payment></Payment>
+            {/* <Payment></Payment> */}
           </Route>
         </Switch>
         {/* Contact Form */}
