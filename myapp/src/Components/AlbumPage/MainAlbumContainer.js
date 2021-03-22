@@ -54,7 +54,7 @@ function MainAlbumContainer() {
               >
                 <Link
                   className="thumbnailText"
-                  to={{ pathname: "/album", state: { album: album } }}
+                  to={{ pathname: `/album/${album.title}`, state: { album: album } }}
                 >
                   <ThumbNail
                     key={album.id}
