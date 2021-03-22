@@ -2,22 +2,22 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../../ContextFolder/Context";
 
+import Music from "../../ContextFolder/Songs";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import {
-  faCoffee,
-  faDesktop,
-  faShoppingCart,
-} from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 function ThumbnailAlbum(props) {
   const context = useContext(UserContext);
+
   const addToChart = (dispatch) => {
     dispatch({
       type: "ADD_CHART_THUMB",
       payload: props.id,
     });
   };
+
   return (
     <div
       className="  px-1 pt-3 mx-auto d-flex flex-column justify-content-center align-items-center"
@@ -35,6 +35,10 @@ function ThumbnailAlbum(props) {
         ></img>
         {/* </Link> */}
       </div>
+      <div style={{ height: "20px" }} className="mx-1">
+        <Music></Music>
+      </div>
+
       <div
         className=" d-flex justify-content-between align-items-center flex-column  px-1"
         style={{ height: "150px" }}
@@ -45,6 +49,7 @@ function ThumbnailAlbum(props) {
           <p>{props.artist}</p>
 
           <p>Price:{props.price} €</p>
+
           <button
             className=" btn-primary h-25"
             style={{ width: "130px" }}
@@ -59,6 +64,7 @@ function ThumbnailAlbum(props) {
             />
             Add to Cart
           </button>
+
           <p className="text-secondary">{props.genre}</p>
         </div>
       </div>
