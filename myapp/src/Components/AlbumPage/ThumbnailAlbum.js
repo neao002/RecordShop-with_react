@@ -12,12 +12,12 @@ import {
 
 function ThumbnailAlbum(props) {
   const context = useContext(UserContext);
-  const addToChart = (dispatch) => {
-    dispatch({
-      type: "ADD_CHART_THUMB",
-      payload: props.id,
-    });
-  };
+  // const addToChart = (dispatch) => {
+  //   dispatch({
+  //     type: "ADD_CHART_THUMB",
+  //     payload: props.id,
+  //   });
+  // };
   return (
     <div
       className="  px-1 pt-3 mx-auto d-flex flex-column justify-content-center align-items-center"
@@ -27,13 +27,11 @@ function ThumbnailAlbum(props) {
         style={{ height: "200px" }}
         className="d-flex justify-content-center align-items-center"
       >
-        {/* <Link to="/"> */}
         <img
           className="mb-2"
           src={props.image}
           style={{ width: "70%", height: "100%", borderRadius: "5px" }}
         ></img>
-        {/* </Link> */}
       </div>
       <div
         className=" d-flex justify-content-between align-items-center flex-column  px-1"
@@ -45,7 +43,7 @@ function ThumbnailAlbum(props) {
           <p>{props.artist}</p>
 
           <p>Price:{props.price} €</p>
-          <button
+          {/* <button
             className=" btn-primary h-25"
             style={{ width: "130px" }}
             onClick={() => {
@@ -58,7 +56,7 @@ function ThumbnailAlbum(props) {
               size="md"
             />
             Add to Cart
-          </button>
+          </button> */}
           <p className="text-secondary">{props.genre}</p>
         </div>
       </div>

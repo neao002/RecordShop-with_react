@@ -1,4 +1,4 @@
-import Nivarva from "../assets/img/picturesAlbums/nirvana.jpg";
+import Nirvana from "../assets/img/picturesAlbums/nirvana.jpg";
 import Beach from "../assets/img/picturesAlbums/PetSoundsCover.jpg";
 import Marvin from "../assets/img/picturesAlbums/Marvin_Gaye.jpg";
 import Jimi from "../assets/img/picturesAlbums/Are_You_Experienced.jpg";
@@ -29,7 +29,7 @@ export const Albums = [
     releaseYear: "1991",
     genre: "Rock",
     price: 17.99,
-    image: Nivarva,
+    image: Nirvana,
   },
   {
     id: 2,

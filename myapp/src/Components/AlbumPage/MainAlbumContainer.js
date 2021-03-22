@@ -5,15 +5,25 @@ import UserContext from "../../ContextFolder/Context";
 import { Link } from "react-router-dom";
 
 import { Form, FormControl } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import {
+  faCoffee,
+  faDesktop,
+  faShoppingCart,
+} from "@fortawesome/free-solid-svg-icons";
 function MainAlbumContainer() {
   const [searchTerm, setSearchTerm] = useState("");
   const context = useContext(UserContext);
-
   // onChange = (e) => {
   //   setSearchTerm({ searchTerm: e.target.value });
   // };
-
+  const addToChart = (dispatch, id) => {
+    dispatch({
+      type: "ADD_CHART_THUMB",
+      payload: id,
+    });
+  };
   return (
     <div className="mx-auto mb-5" style={{ width: "80%" }}>
       <h1
@@ -51,16 +61,15 @@ function MainAlbumContainer() {
             // console.log(album, "here");
             return (
               <div
-                className="thumbNailCard mb-3"
+                className="thumbNailCard mb-3 d-flex flex-column align-items-center"
                 style={{ width: "32%", height: "460px" }}
+                // key={album.id}
               >
                 <Link
                   className="thumbnailText"
                   to={{ pathname: "/album", state: { album: album } }}
                 >
                   <ThumbNail
-                    key={album.id}
-                    id={album.id}
                     title={album.title}
                     artist={album.artist}
                     releasedYear={album.releaseYear}
@@ -68,6 +77,19 @@ function MainAlbumContainer() {
                     image={album.image}
                   ></ThumbNail>
                 </Link>
+                <button
+                  className="btn-primary mt-2"
+                  style={{ width: "50%", height: "30px" }}
+                  onClick={() => {
+                    addToChart(context.myDispatch, album.id);
+                  }}
+                >
+                  <FontAwesomeIcon
+                    className=" highlight logocart mr-2 icon"
+                    icon={faShoppingCart}
+                  />
+                  Add to Cart
+                </button>
               </div>
             );
           })}

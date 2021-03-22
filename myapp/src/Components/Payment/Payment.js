@@ -1,125 +1,115 @@
 import { useContext } from "react";
 import UserContext from "../../ContextFolder/Context";
-
+import ChartItem from "./chartItem";
+import { Link } from "react-router-dom";
 function Payment() {
   const context = useContext(UserContext);
-  console.log(context.myStateData.chart);
-  //! remove handler has to be fixed
-  const removeHandler = (index, dispatch) => {
-    dispatch({
-      type: "REMOVE_FROM_CHART",
-      payload: index,
-    });
-  };
   let totalPrice = 0;
   let delivery = 0;
-  //? minimum limit for delivery 30€
-  if (totalPrice < 30) {
-    delivery = 4.99;
-  } else {
+  if (totalPrice > 30) {
     delivery = 0;
+  } else if (totalPrice < 1) {
+    delivery = 0;
+  } else {
+    delivery = 4.99;
   }
-  return (
-    <div
-      className="d-flex justify-content-start px-5 mx-auto my-4"
-      style={{ width: "80%" }}
-    >
-      <div>
-        <h1>Items:</h1>
-        {context.myStateData.chart.map((item, index, a) => {
-          totalPrice = totalPrice + item.price;
-          // console.log(index);
-          return (
-            <div
-              key={index}
-              style={{
-                width: "100%",
-                height: "190px",
-                border: "1px solid black",
-              }}
-              className="d-flex justify-content-between align-items-center px-3 mb-2"
-            >
-              <div className="w-75 ">
-                <h4>Artist: {item.artist}</h4>
-                <p>
-                  <b>Album:</b> {item.title}
-                </p>
-                <p style={{ marginTop: "-20px" }}>
-                  <b>Genre:</b> {item.genre}
-                </p>
-                <h6>
-                  <b>Price:</b>
-                  {item.price.toFixed(2)} €
-                </h6>
-                <button
-                  className="btn-dark"
-                  onClick={() => {
-                    removeHandler(index, context.myDispatch);
-                  }}
-                >
-                  Remove Item
-                </button>
-              </div>
-              <img src={item.image} className="w-25 h-75"></img>
-            </div>
-          );
-        })}
-      </div>
+  if (context.myStateData.loggedIn) {
+    return (
       <div
-        className="checkout bg-dark text-white py-3 pr-4 pl-3 ml-5 mr-5"
-        style={{ height: "490px", width: "55%", marginTop: "55px" }}
+        className="d-flex justify-content-start px-5 mx-auto my-4"
+        style={{ width: "70%" }}
       >
-        <h1 className="mb-3">Summary</h1>
-        <div className=" d-flex justify-content-between align-items-center">
-          <h4>Subtotal:</h4>
-          <h3>{totalPrice.toFixed(2)} €</h3>
+        <div>
+          <h1>Items:{context.myStateData.chart.length}</h1>
+          {context.myStateData.chart.map((item, index) => {
+            totalPrice = totalPrice + item.price;
+            return (
+              <ChartItem
+                key={index}
+                artist={item.artist}
+                title={item.title}
+                price={item.price}
+                id={item.id}
+                genre={item.genre}
+                image={item.image}
+              ></ChartItem>
+            );
+          })}
         </div>
-        <div className=" d-flex justify-content-between align-items-center">
-          <h4>Delivery:</h4>
-          <h3>{delivery.toFixed(2)} €</h3>
-        </div>
-        <div className="mt-5 d-flex justify-content-between align-items-center">
-          <h1>Total:</h1>
-          <h3>{(totalPrice + delivery).toFixed(2)} €</h3>
-        </div>
-        <div className="d-flex justify-content-between mx-auto flex-column mt-3 h-25 w-100 px-4">
-          <button
-            style={{
-              background: "#ff7700",
-              padding: "5px 7px",
-              fontWeight: "bolder",
-              color: "white",
-              margin: "3px 0",
-            }}
-          >
-            Credit Card
-          </button>
-          <button
-            style={{
-              background: "#ff7700",
-              padding: "5px 7px",
-              fontWeight: "bolder",
-              color: "white",
-              margin: "3px 0",
-            }}
-          >
-            PayPal
-          </button>
-          <button
-            style={{
-              background: "#ff7700",
-              padding: "5px 7px",
-              fontWeight: "bolder",
-              color: "white",
-              margin: "3px 0",
-            }}
-          >
-            Money Transfer
-          </button>
+        <div
+          className="checkout bg-dark text-white py-3 pr-4 pl-3 ml-5 mr-5"
+          style={{ height: "490px", minWidth: "350px", marginTop: "55px" }}
+        >
+          <h1 className="mb-3">Summary</h1>
+          <div className=" d-flex justify-content-between align-items-center">
+            <h4>Subtotal:</h4>
+            <h3>{totalPrice.toFixed(2)} €</h3>
+          </div>
+          <div className=" d-flex justify-content-between align-items-center">
+            <div>
+              <h4>Delivery:</h4>
+              <p>Delivery is free from 30€</p>
+            </div>
+
+            <h3>{delivery.toFixed(2)} €</h3>
+          </div>
+          <div className="mt-5 d-flex justify-content-between align-items-center">
+            <h1>Total:</h1>
+            <h3>{(totalPrice + delivery).toFixed(2)} €</h3>
+          </div>
+          <div className="d-flex justify-content-between mx-auto flex-column mt-3 h-25 w-100 px-2">
+            <button
+              style={{
+                background: "#ff7700",
+                padding: "5px 7px",
+                fontWeight: "bolder",
+                color: "white",
+                margin: "3px 0",
+              }}
+            >
+              Credit Card
+            </button>
+            <button
+              style={{
+                background: "white",
+                padding: "5px 7px",
+                fontWeight: "bolder",
+                color: "black",
+                margin: "3px 0",
+                fontStyle: "italic",
+              }}
+            >
+              <span style={{ color: "blue", fontSize: "1.2rem" }}>P</span>ay
+              <span style={{ color: "blue", fontSize: "1.2rem" }}>P</span>al
+            </button>
+            <button
+              style={{
+                background: "#ff7700",
+                padding: "5px 7px",
+                fontWeight: "bolder",
+                color: "white",
+                margin: "3px 0",
+              }}
+            >
+              Money Transfer
+            </button>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div
+        className="d-flex justify-content-around align-items-center flex-column"
+        style={{ height: "30vh" }}
+      >
+        <h1>Please, Log in for shopping</h1>
+        <Link to="/">
+          <button className="btn-dark">Go to the Home</button>
+        </Link>
+      </div>
+    );
+  }
 }
 
 export default Payment;

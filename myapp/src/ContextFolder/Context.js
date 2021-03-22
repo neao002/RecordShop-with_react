@@ -36,33 +36,41 @@ const reducer = (state, action) => {
       };
     //! remove handler has to be fixed
     case "REMOVE_FROM_CHART":
-      let newChart = state.chart;
-      newChart.splice(action.payload, 1);
-      // console.log(action.payload);
-      // console.log(newChart);
-      // console.log(state.chart);
+      let removeIndex = state.chart.findIndex((item) => {
+        return item.id === action.payload;
+      });
+      let removedChart = [...state.chart];
+      removedChart.splice(removeIndex, 1);
       return {
         ...state,
-        chart: newChart,
+        chart: removedChart,
       };
     case "ADD_CHART_THUMB":
       const addAlbumIndex = state.albums.findIndex((album) => {
         return album.id == action.payload;
       });
+      let addAlbumItem = state.albums[addAlbumIndex];
+      console.log(state.chart);
       if (state.loggedIn) {
         return {
           ...state,
-          chart: [...state.chart, state.albums[addAlbumIndex]],
+          chart: [...state.chart, { ...addAlbumItem, id: state.chart.length }],
         };
       }
     case "ADD_CHART_CAROUSEL":
-      const addCarouselIndex = state.carouselAlbums.findIndex((album) => {
+      let addCarouselIndex = state.carouselAlbums.findIndex((album) => {
         return album.id == action.payload;
       });
+
+      let addAlbumItemCarousel = state.carouselAlbums[addCarouselIndex];
+      console.log(state.chart);
       if (state.loggedIn) {
         return {
           ...state,
-          chart: [...state.chart, state.carouselAlbums[addCarouselIndex]],
+          chart: [
+            ...state.chart,
+            { ...addAlbumItemCarousel, id: state.chart.length },
+          ],
         };
       }
 

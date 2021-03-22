@@ -5,7 +5,7 @@ import AbbeyRoad from "../assets/img/carousel/AbbeyRoad.jpg";
 //! example carousel items
 export const CarouselAlbums = [
   {
-    id: 1,
+    id: 22,
     title: "Californication",
     artist: "Red Hot Chili Peppers",
     price: 35.9,
@@ -13,7 +13,7 @@ export const CarouselAlbums = [
     genre: "Alternative Rock",
   },
   {
-    id: 2,
+    id: 23,
     title: "Everyday Life",
     artist: "Coldplay",
     price: 27.25,
@@ -21,7 +21,7 @@ export const CarouselAlbums = [
     genre: "Alternative",
   },
   {
-    id: 3,
+    id: 24,
     title: "Master of Puppets",
     artist: "Metallica",
     price: 42.5,
@@ -29,7 +29,7 @@ export const CarouselAlbums = [
     genre: "Rock",
   },
   {
-    id: 4,
+    id: 25,
     title: "Abbey Road",
     artist: "The Beatles",
     price: 54.99,
