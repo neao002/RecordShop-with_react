@@ -21,6 +21,11 @@ import Beatless from "../assets/img/picturesAlbums/rubber_soul.png";
 import Ramones from "../assets/img/picturesAlbums/the_ramones.jpg";
 import Hideout from "../assets/img/picturesAlbums/ExileMainSt.jpg";
 
+import Dreams from "../assets/img/songs/fleetwood.mp3";
+import MichaelSong from "../assets/img/songs/michael.mp3";
+import BeatlesSong from "../assets/img/songs/beatles.mp3";
+import u2Song from "../assets/img/songs/u2.mp3";
+
 export const Albums = [
   {
     id: 1,
@@ -30,6 +35,7 @@ export const Albums = [
     genre: "Rock",
     price: 17.99,
     image: Nivarva,
+    src: Dreams,
   },
   {
     id: 2,
@@ -39,6 +45,7 @@ export const Albums = [
     genre: "Rock",
     price: 37.12,
     image: Beach,
+    src: MichaelSong,
   },
   {
     id: 3,
@@ -48,6 +55,7 @@ export const Albums = [
     genre: "Rock",
     price: 24.95,
     image: Marvin,
+    src: BeatlesSong,
   },
   {
     id: 4,
@@ -57,6 +65,7 @@ export const Albums = [
     genre: "Rock",
     price: 21.99,
     image: Jimi,
+    src: u2Song,
   },
   {
     id: 5,

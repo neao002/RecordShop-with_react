@@ -1,14 +1,34 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+
 import Player from "../Components/Songsartist/Players";
 
 import Dreams from "../assets/img/songs/fleetwood.mp3";
+import MichaelSong from "../assets/img/songs/michael.mp3";
+import BeatlesSong from "../assets/img/songs/beatles.mp3";
+import u2Song from "../assets/img/songs/u2.mp3";
+import Nirvana from "../assets/img/songs/nirvana.mp3";
 
 function App() {
   const [songs] = useState([
     {
       title: "Dreams",
       artist: "FleetWoodMac",
-      src: Dreams,
+      src: Nirvana,
+    },
+    {
+      title: "Michael",
+      artist: "Michael",
+      src: MichaelSong,
+    },
+    {
+      title: "Beatles",
+      artist: "Beatles",
+      src: BeatlesSong,
+    },
+    {
+      title: "u2",
+      artist: "u2",
+      src: u2Song,
     },
   ]);
 

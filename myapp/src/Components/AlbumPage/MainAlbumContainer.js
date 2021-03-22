@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import { Form, FormControl } from "react-bootstrap";
 
-// import Player from "../../ContextFolder/Songs";
+import Music from "../../ContextFolder/Songs";
 
 function MainAlbumContainer() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -66,7 +66,6 @@ function MainAlbumContainer() {
                     image={album.image}
                   ></ThumbNail>
                 </Link>
-                {/* <Player /> */}
               </div>
             );
           })}
