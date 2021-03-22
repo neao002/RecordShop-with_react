@@ -2,13 +2,11 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import UserContext from "../../ContextFolder/Context";
 
+import Music from "../../ContextFolder/Songs";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import {
-  faCoffee,
-  faDesktop,
-  faShoppingCart,
-} from "@fortawesome/free-solid-svg-icons";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 function ThumbnailAlbum(props) {
   const context = useContext(UserContext);
@@ -33,6 +31,10 @@ function ThumbnailAlbum(props) {
           style={{ width: "70%", height: "100%", borderRadius: "5px" }}
         ></img>
       </div>
+      <div style={{ height: "20px" }} className="mx-1">
+        <Music></Music>
+      </div>
+
       <div
         className=" d-flex justify-content-between align-items-center flex-column  px-1"
         style={{ height: "150px" }}
@@ -44,6 +46,8 @@ function ThumbnailAlbum(props) {
 
           <p>Price:{props.price} €</p>
           {/* <button
+
+          <button
             className=" btn-primary h-25"
             style={{ width: "130px" }}
             onClick={() => {
