@@ -20,14 +20,7 @@ import Payment from "./Components/Payment/Payment";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import {
-  faCoffee,
-  faDesktop,
-  faShoppingCart,
-  faAdjust,
-  faMoon,
-  faSun,
-} from "@fortawesome/free-solid-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const context = useContext(UserContext);
@@ -36,20 +29,23 @@ function App() {
     <Router>
       <div className={darkMode ? "dark-mode" : "light-mode"}>
         <Navbar />
-        <div className="switch-checkbox">
-          <FontAwesomeIcon
-            className=" mt-3 highlight logocart mr-2 icon"
+        <div className=" switch-checkbox">
+          {/* <FontAwesomeIcon
+            className=" faMoon mt-3 highlight logocart mr-2 icon"
             icon={faMoon}
-            size="1x"
-          />
-          <p>Programmer Mode</p>
-          <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+            size="2x"
+          /> */}
+
+          <button type="submit" class="btn btn-light">
+            <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+            Light-Dark
+          </button>
         </div>
-        <FontAwesomeIcon
+        {/* <FontAwesomeIcon
           className=" faSun mt-3 highlight logocart mr-2 icon"
           icon={faSun}
-          size="1x"
-        />
+          size="2x"
+        /> */}
 
         <Switch>
           <Route path="/" exact>
@@ -70,7 +66,7 @@ function App() {
             exact
           >
             {/* example payment page in component,real one by Ahmad */}
-            {/* <Payment></Payment> */}
+            <Payment></Payment>
           </Route>
         </Switch>
         {/* Contact Form */}

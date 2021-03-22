@@ -139,9 +139,6 @@ a:hover {
   color: white;
 }
 
-form .btnSearchLatest {
-}
-
 .dark-mode {
   background-color: #1a1919;
   color: #999;
@@ -157,5 +154,9 @@ form .btnSearchLatest {
 }
 
 .faSun {
-  background-color: yellow !important;
+  background-color: rgb(119, 119, 11) !important;
+}
+
+.faMoon {
+  background-color: blueviolet;
 }

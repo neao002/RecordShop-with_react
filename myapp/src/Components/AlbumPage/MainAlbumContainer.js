@@ -9,6 +9,11 @@ import { Form, FormControl } from "react-bootstrap";
 function MainAlbumContainer() {
   const [searchTerm, setSearchTerm] = useState("");
   const context = useContext(UserContext);
+
+  // onChange = (e) => {
+  //   setSearchTerm({ searchTerm: e.target.value });
+  // };
+
   return (
     <div className="mx-auto mb-5" style={{ width: "80%" }}>
       <h1
@@ -22,6 +27,7 @@ function MainAlbumContainer() {
             type="text"
             placeholder="Search..."
             onChange={(event) => {
+              event.preventDefault();
               setSearchTerm(event.target.value);
             }}
           />
