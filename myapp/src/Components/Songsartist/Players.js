@@ -14,8 +14,8 @@ function Player(props) {
 
   return (
     <div>
+      {}
       <audio
-        className="c-player--audio"
         src={props.songs[props.currentSongIndex].src}
         ref={audioElement}
         controls

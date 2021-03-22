@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 
 import { Form, FormControl } from "react-bootstrap";
 
-import Music from "../../ContextFolder/Songs";
-
 function MainAlbumContainer() {
   const [searchTerm, setSearchTerm] = useState("");
   const context = useContext(UserContext);
@@ -54,7 +52,7 @@ function MainAlbumContainer() {
               >
                 <Link
                   className="thumbnailText"
-                  to={{ pathname: `/album/${album.title}`, state: { album: album } }}
+                  to={{ pathname: "/album", state: { album: album } }}
                 >
                   <ThumbNail
                     key={album.id}

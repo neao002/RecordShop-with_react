@@ -8,7 +8,8 @@ import BeatlesSong from "../assets/img/songs/beatles.mp3";
 import u2Song from "../assets/img/songs/u2.mp3";
 import Nirvana from "../assets/img/songs/nirvana.mp3";
 
-function App() {
+function Music() {
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [songs] = useState([
     {
       title: "Dreams",
@@ -30,9 +31,12 @@ function App() {
       artist: "u2",
       src: u2Song,
     },
+    {
+      title: "FleetwoodMac",
+      artist: "u2",
+      src: Dreams,
+    },
   ]);
-
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
 
   return (
     <div className="App">
@@ -45,4 +49,4 @@ function App() {
   );
 }
 
-export default App;
+export default Music;

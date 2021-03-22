@@ -82,6 +82,7 @@ export function ContextProvider(props) {
     const localData = localStorage.getItem("updatedRecordState");
     return localData ? JSON.parse(localData) : initialState;
   });
+
   useEffect(() => {
     localStorage.setItem("updatedRecordState", JSON.stringify(recordState));
   }, [recordState]);
