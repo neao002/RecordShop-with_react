@@ -4,15 +4,9 @@ import ChartItem from "./chartItem";
 import { Link } from "react-router-dom";
 function Payment() {
   const context = useContext(UserContext);
-  let totalPrice;
+  let totalPrice = 0;
   let delivery = 0;
-  if (totalPrice > 30) {
-    delivery = 0;
-  } else if ((totalPrice = 0)) {
-    delivery = 0;
-  } else {
-    delivery = 4.99;
-  }
+
   if (context.myStateData.loggedIn) {
     return (
       <div
@@ -25,6 +19,11 @@ function Payment() {
           )}
           {context.myStateData.chart.map((item, index) => {
             totalPrice = totalPrice + item.price;
+            if (totalPrice > 30) {
+              delivery = 0;
+            } else {
+              delivery = 4.99;
+            }
             return (
               <ChartItem
                 key={index}
