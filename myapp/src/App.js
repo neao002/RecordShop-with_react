@@ -20,7 +20,7 @@ function App() {
   const context = useContext(UserContext);
   const [darkMode, setDarkMode] = useState(false);
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <div className={darkMode ? "dark-mode" : "light-mode"}>
         <Navbar />
         <div className=" switch-checkbox">
